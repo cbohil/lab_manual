@@ -1,0 +1,20 @@
+# Writing
+
+Some guidelines and advice on scientific writing.
+
+## General advice
+
+Use R Markdown
+* spell checking in .Rmd
+* Creating a bibliography using .bib files
+
+## Start writing early
+Write a short outline/draft of the method section when planning an experiment
+* as you add details, add this to the outline (can be bullet points at first).
+* IMPORTANT: If/When the experiment becomes a reality, write out the complete detailed Method Section right away - don't wait until after data collection is done and data is analyzed.  You will remember why things were done better if you write it immediately. Also power analysis should be done for every study and reported here right from the start. 
+
+* Introduction/Lit review - same as for methods.  Work through the logic of your arguments and enumerate them, and their rationale(s) in an intro section BEFORE you run a study.  You can wait to turn this into prose as soon as the experiment becomes a reality (i.e., is running), but then you should write up a draft of the intro/lit review/experiment overview/hypotheses sections and any needed theoretical sections (e.g., plan for statistical analysis of fNIRS data, General Recognition Theory section, etc.). 
+* You can also put in a lot of the references at this time, and make sure your reference section is building correctly as you go!
+
+* Summarize all PLANNED analyses and write as much of this as you can ahead of time too.  This will be more tentative in terms of the writing, but the analysis itself should be completely knowable before starting the experiment.  
+In fact - your study variables imply what analyses you'll carry out (e.g., what the variables are, the scale of the data will dictate the statistical analyses, modeling analysis planned, ANOVA details)

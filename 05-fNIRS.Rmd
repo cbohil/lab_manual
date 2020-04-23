@@ -1,0 +1,7 @@
+# Functional Near-Infrared Spectroscopy (fNIRS)
+
+## NIRSPort 88 system (NIRX Medical Technologies, Inc.)
+
+## fNIR Devices Imager 1000 (from fNIR Devices/Biopac)
+
+
