@@ -1,5 +1,44 @@
 # Data Analysis {#intro}
 
+## GitHub Repositories
+
+what to put on github
+what NOT to put on github
+where to put files - R drive; OneDrive; Google Drive
+where to put code - local & repo
+* no data, no output; should be able to regenerate these with 1 click
+* folder structure: data; output, code (functions only)
++  sructure of a project
+- .rmd files on root directory
+- output directory
+- code direcotry: R code files containing functions that you call
+- all other R code should be right in the rmd file
+- SOURCE dependencies (code in R folder) at top of .rmd file that needs them, along with libraries needed for that file.
+* how to ignore something: GitIgore (how to add to it: folders; file types, specific files)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(methods).
 
 Figures and tables with captions will be placed in `figure` and `table` environments, respectively.

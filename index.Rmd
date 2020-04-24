@@ -16,7 +16,7 @@ description: "This document contains guidelines and how-to examples for members 
 
 The goal of this book is to serve as a resource for procedures in the lab, tutorials on software and hardware use, and some other advice that I hope will be helpful (e.g., advice on scientific manuscript writing).  My guess is that it will serve primarily to get people started in the lab, and also as a refresher on some details about data handling/analyis and use of some equipment.
 
-This is a living document.  We should update it regularly.
+This is a living document; it will never be "finished".  We should update it regularly. 
 
 This is a _sample_ book written in **Markdown**. You can use anything that Pandoc's Markdown supports, e.g., a math equation $a^2 + b^2 = c^2$.
 

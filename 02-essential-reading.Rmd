@@ -1,3 +1,20 @@
 # Essential Reading
 
 Here is a list of papers, book chapters, or books that everyone in the lab should read.
+
+
+## Categorization
+
+
+
+## fNIRS/neuroimaging
+
+
+## Virtual/Augmented Reality
+
+
+## Statistsical Analysis
+
+
+## R/RMarkdown
+* [RMarkdown for Scientists](https://rmd4sci.njtierney.com/) 
