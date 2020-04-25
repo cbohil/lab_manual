@@ -17,6 +17,30 @@ where to put code - local & repo
 * how to ignore something: GitIgore (how to add to it: folders; file types, specific files)
 
 
+## Steps in every analysis
+
+1) Read in data, get into Tidy format
+
+2) Manipulate data as needed
+
+3) Visualize data
+
+use ggplot2 package
+
+Always do this before any statistical analysis.  Look at the data to see what is going on.  After that you can do statistical analysis (e.g., ANOVA/regression, t-tests, etc.) to see if any obsered differences are large enough to be considered reliable (i.e., "statistically significant"). 
+
+You should have plots summarizing each of your variables, as well as combinations of variables that are obviously of importance (e.g., block x accuracy)
+
+Types of plots for variable types:
+- 2 continuous variables (e.g., age, height): scatterplot (GGPLOT); line (GGPLOT)
+etc...
+
+4) Statistical analysis
+
+5) Data modeling 
+
+
+
 
 
 
