@@ -18,3 +18,9 @@ Here is a list of papers, book chapters, or books that everyone in the lab shoul
 
 ## R/RMarkdown
 * [RMarkdown for Scientists](https://rmd4sci.njtierney.com/) 
+
+
+## Productivity/Good Research Habits
+* [Develping good Research Habits](file:///C:/Users/bohil/Downloads/ResearchHabits.pdf)
+- especially see the slides labeled "Reproducability"
+- All data edits scripted; all analysis scripted; Graphs & Tables generated with scripts and automatically pulled into manuscript
