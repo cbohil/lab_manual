@@ -8,3 +8,15 @@ Essential resources and steps
 
 
 You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(methods).
+
+
+
+## General advice
+
+1. Don't get attached to any experiment (or theory); just run as many as you can!
+  i) Expect to be surprised; your hypotheses will often be wrong.
+  ii) We need to publish research, but desperately needing to publish something is a recipe
+  for over-interpretation of results
+  iii) You can mitigate this to some extent by running lots of studies.  Think of it like
+  drilling for oil; its good to have a lot of wells going at once.
+
