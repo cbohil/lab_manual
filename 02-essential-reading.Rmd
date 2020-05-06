@@ -4,6 +4,20 @@ Here is a list of papers, book chapters, or books that everyone in the lab shoul
 
 
 ## Categorization
+0. Signal detection theory (Swets book chapter; other intro chapters)
+1. Human Category Learning.  Ashby & Maddox (2005).  https://www.annualreviews.org/doi/pdf/10.1146/annurev.psych.56.091103.070217
+2. Human Category Learning 2.0. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3076539/
+3. Multidimensional Signal Detection Theory. https://labs.psych.ucsb.edu/ashby/gregory/sites/labs.psych.ucsb.edu.ashby.gregory/files/pubs/ashbysotogrt2015.pdf
+4. General recognition theory with individual differences: a new method for examining perceptual and decisional interactions with an application to face perception.  https://link.springer.com/article/10.3758%2Fs13423-014-0661-y
+5. Multiple Systems of Perceptual
+Category Learning: Theory and
+Cognitive Tests.  https://labs.psych.ucsb.edu/ashby/gregory/sites/labs.psych.ucsb.edu.ashby.gregory/files/pubs/ashbyvalentinhdbkcat_0.pdf
+6. The Categorization Experiment:
+Experimental Design and Data Analysis.  https://labs.psych.ucsb.edu/ashby/gregory/sites/labs.psych.ucsb.edu.ashby.gregory/files/pubs/ashbyvalentin2018.pdf
+7.  David Smith prototype v exemplar models
+8.  seminal articles: tversky similarity paper, averaging paper (ashby); medin & shafer; nosofsky; ashby & townsend 1986; david smith? 
+
+
 
 
 
