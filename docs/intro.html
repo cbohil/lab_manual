@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 4 Data Analysis | CDL Virtual Advisor (Lab Manual)</title>
+  <meta name="description" content="This document contains guidelines and how-to examples for members of the CDL. It should be a useful resource for all lab members, but particularly for new members" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 4 Data Analysis | CDL Virtual Advisor (Lab Manual)" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This document contains guidelines and how-to examples for members of the CDL. It should be a useful resource for all lab members, but particularly for new members" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 4 Data Analysis | CDL Virtual Advisor (Lab Manual)" />
+  
+  <meta name="twitter:description" content="This document contains guidelines and how-to examples for members of the CDL. It should be a useful resource for all lab members, but particularly for new members" />
+  
+
+<meta name="author" content="Corey Bohil" />
+
+
+<meta name="date" content="2020-05-06" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="essential-reading.html"/>
+<link rel="next" href="writing.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">CDL Virtual Advisor</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Overview</a></li>
+<li class="chapter" data-level="2" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i><b>2</b> Getting Started in the Lab</a><ul>
+<li class="chapter" data-level="2.1" data-path="getting-started.html"><a href="getting-started.html#paperwork"><i class="fa fa-check"></i><b>2.1</b> Paperwork</a></li>
+<li class="chapter" data-level="2.2" data-path="getting-started.html"><a href="getting-started.html#software"><i class="fa fa-check"></i><b>2.2</b> Software</a></li>
+<li class="chapter" data-level="2.3" data-path="getting-started.html"><a href="getting-started.html#general-advice"><i class="fa fa-check"></i><b>2.3</b> General advice</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="essential-reading.html"><a href="essential-reading.html"><i class="fa fa-check"></i><b>3</b> Essential Reading</a><ul>
+<li class="chapter" data-level="3.1" data-path="essential-reading.html"><a href="essential-reading.html#categorization"><i class="fa fa-check"></i><b>3.1</b> Categorization</a></li>
+<li class="chapter" data-level="3.2" data-path="essential-reading.html"><a href="essential-reading.html#fnirsneuroimaging"><i class="fa fa-check"></i><b>3.2</b> fNIRS/neuroimaging</a></li>
+<li class="chapter" data-level="3.3" data-path="essential-reading.html"><a href="essential-reading.html#virtualaugmented-reality"><i class="fa fa-check"></i><b>3.3</b> Virtual/Augmented Reality</a></li>
+<li class="chapter" data-level="3.4" data-path="essential-reading.html"><a href="essential-reading.html#statistsical-analysis"><i class="fa fa-check"></i><b>3.4</b> Statistsical Analysis</a></li>
+<li class="chapter" data-level="3.5" data-path="essential-reading.html"><a href="essential-reading.html#rrmarkdown"><i class="fa fa-check"></i><b>3.5</b> R/RMarkdown</a></li>
+<li class="chapter" data-level="3.6" data-path="essential-reading.html"><a href="essential-reading.html#productivitygood-research-habits"><i class="fa fa-check"></i><b>3.6</b> Productivity/Good Research Habits</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>4</b> Data Analysis</a><ul>
+<li class="chapter" data-level="4.1" data-path="intro.html"><a href="intro.html#github-repositories"><i class="fa fa-check"></i><b>4.1</b> GitHub Repositories</a></li>
+<li class="chapter" data-level="4.2" data-path="intro.html"><a href="intro.html#steps-in-every-analysis"><i class="fa fa-check"></i><b>4.2</b> Steps in every analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="writing.html"><a href="writing.html"><i class="fa fa-check"></i><b>5</b> Writing</a><ul>
+<li class="chapter" data-level="5.1" data-path="writing.html"><a href="writing.html#general-advice-1"><i class="fa fa-check"></i><b>5.1</b> General advice</a></li>
+<li class="chapter" data-level="5.2" data-path="writing.html"><a href="writing.html#start-writing-early"><i class="fa fa-check"></i><b>5.2</b> Start writing early</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="writing.html"><a href="writing.html#misc"><i class="fa fa-check"></i><b>5.2.1</b> misc</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="functional-near-infrared-spectroscopy-fnirs.html"><a href="functional-near-infrared-spectroscopy-fnirs.html"><i class="fa fa-check"></i><b>6</b> Functional Near-Infrared Spectroscopy (fNIRS)</a><ul>
+<li class="chapter" data-level="6.1" data-path="functional-near-infrared-spectroscopy-fnirs.html"><a href="functional-near-infrared-spectroscopy-fnirs.html#nirsport-88-system-nirx-medical-technologies-inc."><i class="fa fa-check"></i><b>6.1</b> NIRSPort 88 system (NIRX Medical Technologies, Inc.)</a></li>
+<li class="chapter" data-level="6.2" data-path="functional-near-infrared-spectroscopy-fnirs.html"><a href="functional-near-infrared-spectroscopy-fnirs.html#fnir-devices-imager-1000-from-fnir-devicesbiopac"><i class="fa fa-check"></i><b>6.2</b> fNIR Devices Imager 1000 (from fNIR Devices/Biopac)</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="virtual-augmented-reality.html"><a href="virtual-augmented-reality.html"><i class="fa fa-check"></i><b>7</b> Virtual &amp; Augmented Reality</a><ul>
+<li class="chapter" data-level="7.1" data-path="virtual-augmented-reality.html"><a href="virtual-augmented-reality.html#virtual-reality"><i class="fa fa-check"></i><b>7.1</b> Virtual Reality</a></li>
+<li class="chapter" data-level="7.2" data-path="virtual-augmented-reality.html"><a href="virtual-augmented-reality.html#augmented-reality"><i class="fa fa-check"></i><b>7.2</b> Augmented Reality</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="program-requirements.html"><a href="program-requirements.html"><i class="fa fa-check"></i><b>8</b> Program Requirements</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">CDL Virtual Advisor (Lab Manual)</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="intro" class="section level1">
+<h1><span class="header-section-number">Chapter 4</span> Data Analysis</h1>
+<div id="github-repositories" class="section level2">
+<h2><span class="header-section-number">4.1</span> GitHub Repositories</h2>
+<p>what to put on github
+what NOT to put on github
+where to put files - R drive; OneDrive; Google Drive
+where to put code - local &amp; repo
+* no data, no output; should be able to regenerate these with 1 click
+* folder structure: data; output, code (functions only)
++ sructure of a project
+- .rmd files on root directory
+- output directory
+- code direcotry: R code files containing functions that you call
+- all other R code should be right in the rmd file
+- SOURCE dependencies (code in R folder) at top of .rmd file that needs them, along with libraries needed for that file.
+* how to ignore something: GitIgore (how to add to it: folders; file types, specific files)</p>
+</div>
+<div id="steps-in-every-analysis" class="section level2">
+<h2><span class="header-section-number">4.2</span> Steps in every analysis</h2>
+<ol style="list-style-type: decimal">
+<li><p>Read in data, get into Tidy format</p></li>
+<li><p>Manipulate data as needed</p></li>
+<li><p>Visualize data</p></li>
+</ol>
+<p>use ggplot2 package</p>
+<p>Always do this before any statistical analysis. Look at the data to see what is going on. After that you can do statistical analysis (e.g., ANOVA/regression, t-tests, etc.) to see if any obsered differences are large enough to be considered reliable (i.e., “statistically significant”).</p>
+<p>You should have plots summarizing each of your variables, as well as combinations of variables that are obviously of importance (e.g., block x accuracy)</p>
+<p>Types of plots for variable types:
+- 2 continuous variables (e.g., age, height): scatterplot (GGPLOT); line (GGPLOT)
+etc…</p>
+<ol start="4" style="list-style-type: decimal">
+<li>Statistical analysis</li>
+</ol>
+<blockquote>
+<blockquote>
+<p>data analysis
+1) - scale types: ALWAYS consider first!
+metric, ordinal, etc
+need to know this for plotting and statistical analysis
+2) - long form vs wide form data; transforming between these
+important for plotting, ANOVA,
+2.5) data assumption: normally distributed? y = data; completely unknown; normal? tests
+3) general linear model
+correlation; simple regression, multiple regression
+&gt; prediction- yes! causation - no!
+&gt; causation - need experiment (control timing of cause(s)!! (only way w obs data = SEM/BAYES NETS)
+ttest logic
+anova logic
+ANOVA is a special case of regression with dichotomos predictors! (same mathematical model)
+what is the linear model doing? linear equation + normally distributed noise
+&gt; assumption of the model - normally distributed data ==&gt; the NOISE!! (unexplained variance part).</p>
+</blockquote>
+</blockquote>
+<p>how do do anovas/regression w software
+&gt;&gt; spss
+&gt;&gt; jasp
+&gt;&gt; R</p>
+<p>how to interpret &amp; report results (APA style; what to report; how to INTERPRET!)
+&gt;&gt; ANOVA
+&gt;&gt; regression?</p>
+<blockquote>
+<p>what if assumptions are violated?
+&gt; nonparametric statistical tests (robust to violations)</p>
+</blockquote>
+<p>frequentist (classical) vs bayesian statistics
+&gt;&gt; why? replicability!
+&gt;&gt; problems w classical (multiple comparisons; null hypothesis not what we want, no peeking/cheating!)
+&gt;&gt; problems solved by bayesian
+&gt;&gt; is NHST/classical worthless? NO!! its just that bayesian seems to be BETTER (more reliable by avoiding some of the problems that reduce reliability in terms of reproducability (replicability)
+&gt; statistics is about REPLICATILBITY
+&gt; replicability is about what is true!<br />
+&gt; we want to avoid publishig things that are not true! we want us (and others) to be able to replcate; bayesian may help us play it safer</p>
+<p>so what do we do in stats? 2 things
+1) estimation (e.g., mean, variance, difference between groups, learning rate, regreession coefficient)
+2) inference (e.g., difference between groups? effect of treatement? theory/model 1 better than theory/model 2?)
+note: both classical and bayesian apply the SAME MODEL!! GENERAL LINEAR MODEL
+&gt;&gt; they differ in terms of how they ESTIAMTE the parameters of the model(s)
+&gt;&gt; they differ in how we INTERPET THE RESULTS (i.e., make infernces from the data!)</p>
+<ol start="5" style="list-style-type: decimal">
+<li>Data modeling</li>
+</ol>
+<p>You can label chapter and section titles using <code>{#label}</code> after them, e.g., we can reference Chapter <a href="intro.html#intro">4</a>. If you do not manually label them, there will be automatic labels anyway, e.g., Chapter <a href="#methods"><strong>??</strong></a>.</p>
+<p>Figures and tables with captions will be placed in <code>figure</code> and <code>table</code> environments, respectively.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="kw">par</span>(<span class="dt">mar =</span> <span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">4</span>, <span class="fl">.1</span>, <span class="fl">.1</span>))</a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="kw">plot</span>(pressure, <span class="dt">type =</span> <span class="st">&#39;b&#39;</span>, <span class="dt">pch =</span> <span class="dv">19</span>)</a></code></pre></div>
+<div class="figure" style="text-align: center"><span id="fig:nice-fig"></span>
+<img src="bookdown-demo_files/figure-html/nice-fig-1.png" alt="Here is a nice figure!" width="80%" />
+<p class="caption">
+Figure 4.1: Here is a nice figure!
+</p>
+</div>
+<p>Reference a figure by its code chunk label with the <code>fig:</code> prefix, e.g., see Figure <a href="intro.html#fig:nice-fig">4.1</a>. Similarly, you can reference tables generated from <code>knitr::kable()</code>, e.g., see Table <a href="intro.html#tab:nice-tab">4.1</a>.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1">knitr<span class="op">::</span><span class="kw">kable</span>(</a>
+<a class="sourceLine" id="cb3-2" title="2">  <span class="kw">head</span>(iris, <span class="dv">20</span>), <span class="dt">caption =</span> <span class="st">&#39;Here is a nice table!&#39;</span>,</a>
+<a class="sourceLine" id="cb3-3" title="3">  <span class="dt">booktabs =</span> <span class="ot">TRUE</span></a>
+<a class="sourceLine" id="cb3-4" title="4">)</a></code></pre></div>
+<table>
+<caption><span id="tab:nice-tab">Table 4.1: </span>Here is a nice table!</caption>
+<thead>
+<tr class="header">
+<th align="right">Sepal.Length</th>
+<th align="right">Sepal.Width</th>
+<th align="right">Petal.Length</th>
+<th align="right">Petal.Width</th>
+<th align="left">Species</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">5.1</td>
+<td align="right">3.5</td>
+<td align="right">1.4</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="even">
+<td align="right">4.9</td>
+<td align="right">3.0</td>
+<td align="right">1.4</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="odd">
+<td align="right">4.7</td>
+<td align="right">3.2</td>
+<td align="right">1.3</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="even">
+<td align="right">4.6</td>
+<td align="right">3.1</td>
+<td align="right">1.5</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="odd">
+<td align="right">5.0</td>
+<td align="right">3.6</td>
+<td align="right">1.4</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="even">
+<td align="right">5.4</td>
+<td align="right">3.9</td>
+<td align="right">1.7</td>
+<td align="right">0.4</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="odd">
+<td align="right">4.6</td>
+<td align="right">3.4</td>
+<td align="right">1.4</td>
+<td align="right">0.3</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="even">
+<td align="right">5.0</td>
+<td align="right">3.4</td>
+<td align="right">1.5</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="odd">
+<td align="right">4.4</td>
+<td align="right">2.9</td>
+<td align="right">1.4</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="even">
+<td align="right">4.9</td>
+<td align="right">3.1</td>
+<td align="right">1.5</td>
+<td align="right">0.1</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="odd">
+<td align="right">5.4</td>
+<td align="right">3.7</td>
+<td align="right">1.5</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="even">
+<td align="right">4.8</td>
+<td align="right">3.4</td>
+<td align="right">1.6</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="odd">
+<td align="right">4.8</td>
+<td align="right">3.0</td>
+<td align="right">1.4</td>
+<td align="right">0.1</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="even">
+<td align="right">4.3</td>
+<td align="right">3.0</td>
+<td align="right">1.1</td>
+<td align="right">0.1</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="odd">
+<td align="right">5.8</td>
+<td align="right">4.0</td>
+<td align="right">1.2</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="even">
+<td align="right">5.7</td>
+<td align="right">4.4</td>
+<td align="right">1.5</td>
+<td align="right">0.4</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="odd">
+<td align="right">5.4</td>
+<td align="right">3.9</td>
+<td align="right">1.3</td>
+<td align="right">0.4</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="even">
+<td align="right">5.1</td>
+<td align="right">3.5</td>
+<td align="right">1.4</td>
+<td align="right">0.3</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="odd">
+<td align="right">5.7</td>
+<td align="right">3.8</td>
+<td align="right">1.7</td>
+<td align="right">0.3</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="even">
+<td align="right">5.1</td>
+<td align="right">3.8</td>
+<td align="right">1.5</td>
+<td align="right">0.3</td>
+<td align="left">setosa</td>
+</tr>
+</tbody>
+</table>
+<p>You can write citations, too. For example, we are using the <strong>bookdown</strong> package <span class="citation">(Xie <a href="#ref-R-bookdown" role="doc-biblioref">2020</a>)</span> in this sample book, which was built on top of R Markdown and <strong>knitr</strong> <span class="citation">(Xie <a href="#ref-xie2015" role="doc-biblioref">2015</a>)</span>.</p>
+
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-xie2015">
+<p>Xie, Yihui. 2015. <em>Dynamic Documents with R and Knitr</em>. 2nd ed. Boca Raton, Florida: Chapman; Hall/CRC. <a href="http://yihui.name/knitr/">http://yihui.name/knitr/</a>.</p>
+</div>
+<div id="ref-R-bookdown">
+<p>Xie, Yihui. 2020. <em>Bookdown: Authoring Books and Technical Documents with R Markdown</em>. <a href="https://CRAN.R-project.org/package=bookdown">https://CRAN.R-project.org/package=bookdown</a>.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="essential-reading.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="writing.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/03-data-analysis.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
