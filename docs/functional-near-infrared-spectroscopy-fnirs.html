@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 6 Functional Near-Infrared Spectroscopy (fNIRS) | CDL Virtual Advisor (Lab Manual)</title>
   <meta name="description" content="This document contains guidelines and how-to examples for members of the CDL. It should be a useful resource for all lab members, but particularly for new members" />
-  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 6 Functional Near-Infrared Spectroscopy (fNIRS) | CDL Virtual Advisor (Lab Manual)" />
   <meta property="og:type" content="book" />
@@ -53,9 +53,9 @@
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
@@ -64,16 +64,14 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
+    border: none; pointer-events: all; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -82,9 +80,9 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  {  }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+a.sourceLine::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -137,7 +135,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i><b>2</b> Getting Started in the Lab</a><ul>
 <li class="chapter" data-level="2.1" data-path="getting-started.html"><a href="getting-started.html#paperwork"><i class="fa fa-check"></i><b>2.1</b> Paperwork</a></li>
 <li class="chapter" data-level="2.2" data-path="getting-started.html"><a href="getting-started.html#software"><i class="fa fa-check"></i><b>2.2</b> Software</a></li>
-<li class="chapter" data-level="2.3" data-path="getting-started.html"><a href="getting-started.html#general-advice"><i class="fa fa-check"></i><b>2.3</b> General advice</a></li>
+<li class="chapter" data-level="2.3" data-path="getting-started.html"><a href="getting-started.html#irb"><i class="fa fa-check"></i><b>2.3</b> IRB</a></li>
+<li class="chapter" data-level="2.4" data-path="getting-started.html"><a href="getting-started.html#subject-recruitment"><i class="fa fa-check"></i><b>2.4</b> Subject Recruitment</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="getting-started.html"><a href="getting-started.html#sona"><i class="fa fa-check"></i><b>2.4.1</b> Sona</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="getting-started.html"><a href="getting-started.html#general-advice"><i class="fa fa-check"></i><b>2.5</b> General advice</a></li>
+<li class="chapter" data-level="2.6" data-path="getting-started.html"><a href="getting-started.html#modifying-this-lab-manual-grad-students-only"><i class="fa fa-check"></i><b>2.6</b> Modifying this Lab Manual (Grad students only)</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="essential-reading.html"><a href="essential-reading.html"><i class="fa fa-check"></i><b>3</b> Essential Reading</a><ul>
 <li class="chapter" data-level="3.1" data-path="essential-reading.html"><a href="essential-reading.html#categorization"><i class="fa fa-check"></i><b>3.1</b> Categorization</a></li>
@@ -165,9 +168,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.1" data-path="virtual-augmented-reality.html"><a href="virtual-augmented-reality.html#virtual-reality"><i class="fa fa-check"></i><b>7.1</b> Virtual Reality</a></li>
 <li class="chapter" data-level="7.2" data-path="virtual-augmented-reality.html"><a href="virtual-augmented-reality.html#augmented-reality"><i class="fa fa-check"></i><b>7.2</b> Augmented Reality</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="program-requirements.html"><a href="program-requirements.html"><i class="fa fa-check"></i><b>8</b> Program Requirements</a><ul>
-<li class="chapter" data-level="8.1" data-path="program-requirements.html"><a href="program-requirements.html#undergraduate-research-assistants"><i class="fa fa-check"></i><b>8.1</b> Undergraduate research assistants</a><ul>
-<li class="chapter" data-level="8.1.1" data-path="program-requirements.html"><a href="program-requirements.html#volunteer-form"><i class="fa fa-check"></i><b>8.1.1</b> Volunteer form</a></li>
+<li class="chapter" data-level="8" data-path="students.html"><a href="students.html"><i class="fa fa-check"></i><b>8</b> Students</a><ul>
+<li class="chapter" data-level="8.1" data-path="students.html"><a href="students.html#ph.d.-students"><i class="fa fa-check"></i><b>8.1</b> Ph.D. Students</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="students.html"><a href="students.html#hfc-program-requirements"><i class="fa fa-check"></i><b>8.1.1</b> HFC Program Requirements</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="students.html"><a href="students.html#undergraduate-students"><i class="fa fa-check"></i><b>8.2</b> Undergraduate Students</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="students.html"><a href="students.html#volunteer-form"><i class="fa fa-check"></i><b>8.2.1</b> Volunteer form</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
@@ -196,6 +202,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="nirsport-88-system-nirx-medical-technologies-inc." class="section level2">
 <h2><span class="header-section-number">6.1</span> NIRSPort 88 system (NIRX Medical Technologies, Inc.)</h2>
 <p>We have a NIRX nirsport88 mobile system, which no longer appears on the Nirx website.</p>
+<div class="figure">
+<img src="docs/resources/nirsport88.jpg" alt="NIRx NirSport88 System" />
+<p class="caption">NIRx NirSport88 System</p>
+</div>
 <p>Nevertheless, everything needed (data acquisition &amp; analysis software, support, training) can be found on the NIRx website:
 <a href="https://nirx.net/" class="uri">https://nirx.net/</a></p>
 <ol style="list-style-type: decimal">

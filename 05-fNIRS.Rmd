@@ -4,6 +4,9 @@
 
 We have a NIRX nirsport88 mobile system, which no longer appears on the Nirx website.
 
+![NIRx NirSport88 System](docs/resources/nirsport88.jpg)
+
+
 Nevertheless, everything needed (data acquisition & analysis software, support, training) can be found on the NIRx website: 
 https://nirx.net/
 
