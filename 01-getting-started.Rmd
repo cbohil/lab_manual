@@ -8,6 +8,31 @@ See chapter 7 - Students
 
 OK NEED TO FIGURE OUT WHAT WILL GO IN THIS SECTION - UNDERGRAD STUFF HERE OR IN CH 7?
 
+CK - All of it here?? That way it's together, and then ch 7 can be just for grad students and include things like program requirements, the checklist, etc.??
+
+### Undergraduate Students
+
+There are two options for undergraduate RA's to get started with the lab; each RA only needs to choose one or the other. 
+
+
+
+
+### Registration
+Registering for Directed Independent Research (PSY4912) has the advantage of putting research on their transcript. We almost always register them for 0 credit hours so they can avoid paying tuition/fees, but they can take more if they need to fill out their schedule to reach full-time, keep a scholarship, etc. The [Restricted Registration Form](docs/resources/Undergraduate Registration Agreement Summer 2020.pdf) is filled out according to this template. IMPORTANT: Be sure the version you have is the most recent one (i.e., check with the program assistant, Mikala). 
+1. Grad student fills out the term/course # (PSY4912) and the "Assignments and Expectations" section. The latter is completely made up; only the dates matter. The due date of Assignment 1 must be before the end of Add/Drop, and Assignment 3 must be due before the end of finals week (the last day of classes is safe). All else can go unchanged.
+2. Undergrad fills out the form with their information and signs the document (by hand or with an e-signer).
+3. Grad student sends form to the instructor/PI (Dr. Bohil) to be signed and then sends signed form back to the undergrad.
+4. Undergrad sends completed and signed form to psych advising (room: PSY 250; email: <Psychadvising@ucf.edu>)
+Due date: Signed form must be delivered to psych advising by the end of Add/Drop.
+
+Option 2: Fill out the Volunteer Services Agreement. This brings them under the regulatory umbrella of UCF (i.e., liability insurance, ethics training compliance, etc.)
+Grad student initiates form on [https://compliance.ucf.edu/enterprise-risk-management/university-volunteers/]
+Filing instructions [attached]
+Note: The faculty member (Dr. Bohil) must be listed as the supervisor, not a grad student. 
+Note: The forms previously were good for only one semester, as of Summer 2020 they are good for a year.
+
+### Graduate Students
+
 ## Software
 
 
@@ -18,7 +43,9 @@ You can label chapter and section titles using `{#label}` after them, e.g., we c
 ## Subject Recruitment
 
 ### Sona
-[Using the Sona system](docs/resources/SONA new studies guide.pdf)
+Recruitment is done through the SONA system - see [using SONA](docs/resources/SONA Guide.pdf) for a guide to setting up and running studies using the university subject pool. 
+
+The SONA system is administered by Dr. Chrysalis Wright, and the primary point of contact (graduate student assistant) is Mark Crisafulli. Questions should be directed to Mr. Crisafulli (psych-research@ucf.edu). 
 
 
 
