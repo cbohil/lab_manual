@@ -25,11 +25,11 @@ Registering for Directed Independent Research (PSY4912) has the advantage of put
 4. Undergrad sends completed and signed form to psych advising (room: PSY 250; email: <Psychadvising@ucf.edu>)
 Due date: Signed form must be delivered to psych advising by the end of Add/Drop.
 
-Option 2: Fill out the Volunteer Services Agreement. This brings them under the regulatory umbrella of UCF (i.e., liability insurance, ethics training compliance, etc.)
-Grad student initiates form on [https://compliance.ucf.edu/enterprise-risk-management/university-volunteers/]
-Filing instructions [attached]
-Note: The faculty member (Dr. Bohil) must be listed as the supervisor, not a grad student. 
-Note: The forms previously were good for only one semester, as of Summer 2020 they are good for a year.
+### Volunteer Services Agreement.
+Students that opt not to register must sign the Volunteer Services Agreement. This brings them under the regulatory umbrella of UCF (i.e., liability insurance, ethics training compliance, etc.). See the [volunteer form instructions](docs/resources/VolunteerFormInstructions.pdf) for guidance. 
+- Grad student initiates form here: https://compliance.ucf.edu/enterprise-risk-management/university-volunteers/
+- Note: The faculty member (Dr. Bohil) must be listed as the supervisor, not a grad student. 
+- Note: The forms previously were good for only one semester, as of Summer 2020 they are good for a year.
 
 ### Graduate Students
 
