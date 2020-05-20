@@ -99,6 +99,10 @@ note: both classical and bayesian apply the SAME MODEL!! GENERAL LINEAR MODEL
 
 
 
+misc
+>> switching between long & short data types
+>> page for this?  blog post demonstrations? both? 
+>> important: data types -boring but essential; need to master this as it underlies proper use of functions and many errors are related to mis-use
 
 
 
