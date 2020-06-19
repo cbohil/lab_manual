@@ -21,19 +21,70 @@ the associated email must have the \*\@ucf.edu domain. Best practice is to use t
 While many issues one might encounter are addressed in the [documentation](https://www.psychopy.org/documentation.html), keep in mind that, as with all free open-source software, PsychoPy and Pavlovia are perpetually under development and there will be bugs. Multiple resources exist to facilitate solving such problems -- the [PsychoPy Forum](https://discourse.psychopy.org/) is home to a growing and very helpful community, UCF Psychology 
 will be adding a private discussion board (to be added later) specifically for helping each other use PsychoPy -- but ultimately the how-to of building your experiment falls to you, the researcher. A few common questions have, however, been addressed below, and suggestions for addition to this list are always welcomed.
 
+### Technical
 
-(@) How do I 
+(@) Is there a built-in component for providing feedback based on participants' responses?
 
-asdf
+Astonishingly, no. The way to provide corrective feedback is using the [Code Component](https://www.psychopy.org/builder/components/code.html). An example of the Python code necessary is provided below. Note that the strings used are f-strings -- this is necessary for successful translation to JS. 
 
+In Begin Experiment:  
+`msg=''  #msg variable just needs some value at start`\
+
+In Begin Routine:  
+`if not resp.keys: # failed to respond`\
+\         `msg="Repeat trial. Use the labelled keys."`\
+`elif resp.corr: #stored on last run routine`\
+\         `msg=f"Correct! \n\nAnswer: {AnswerName}"`\
+`elif not resp.corr: #wrong answer`\
+\        `msg=f"Wrong. \n\nAnswer: {AnswerName}"`\
+    
+    
+In End Routine: (If repeating trials without responses)  
+`if not resp.keys:`\
+\         `repeatTrial.finished = False # "repeatTrial" must be "trials" in the JS code`\
+`else:`\
+\         `repeatTrial.finished = True`   
+\
+
+(@) Why does my feedback work in Python but not in JS? 
+
+The built-in Python->JS translator is good but not perfect. Be sure you are using f-strings (see above).
+\
+\
+
+(@) I'm trying to repeat trials when the participant doesn't provide a response/correct response. It works in Python but not JS, what's up?
+
+JS's default trial handler changes the name of whatever loop is currently looping to be "trials". So, if you're using the code shown above (In End Routine), you'll need to change the code in the JS window from `repeatTrial.finished = false;` to `trials.finished=false;`
+\
+\
+
+(@) Why are my stimulus image files not being read into my experiment for presentation?
+
+PsychoPy's pathing is picky - be sure your image files (.PNG, .wav, etc.) are in the root directory with your experiment file (.psyexp or .py) and your conditions file(s) (.csv, .xlsx, etc.). 
+\
+\
+
+### UCF-specific
 
 (@) Can I collect restricted data using PsychoPy?
 
-No. While the program itself allows for the collection of many kinds of data, including survey, the data storage of Pavlovia does not meet UCF's InfoSec requirements for sensitive or identifiable data. 
-
+No. While the program itself allows for the collection of many kinds of data, including survey, the data storage of Pavlovia does not meet UCF's InfoSec requirements for sensitive or identifiable data.
+\
 
 (@) What can I do if I need to collect restricted data then?
 
 Additional questions can be added to SONA's intake questionnaire to securely collect sensitive or identifiable data.
+\
 
-(@) 
+(@) How do I integrate my experiment with SONA for automatic credit granting?
+
+See the guides on [SONA's help page](https://www.sona-systems.com/help/psychopy.aspx) and in the [PsychoPy documentation](https://www.psychopy.org/online/onlineParticipants.html#recruitingonline). 
+\
+\
+
+### Miscellaneous
+
+(@) How do I cite PsychoPy?
+
+See the [about page](https://www.psychopy.org/about/index.html) of the documentation for the latest, most relevant citation.
+
