@@ -1,0 +1,39 @@
+# Psychopy for Data Collection {#psychopy}
+
+[Psychopy](https://www.psychopy.org) is a free open-source package for building  experiments in Python that is developed and maintained by the University of Nottingham in the UK. It has been active since 2007, but recent updates have introduced a purpose-built solution for online data collection called [Pavlovia](https://pavlovia.org/#about). Pavlovia is a front-end for gitlab and allows for version control of experiment code. 
+
+## Getting Started
+
+### PsychoPy
+
+A standalone version (no Python install required) can be downloaded from the [project's website](https://www.psychopy.org/download.html).  After installing Psychopy, the best place to start is with the [PsychoPy documentation](https://www.psychopy.org/documentation.html), which includes guides on getting started building experiments. Included with the initial download are several minimalist, functional experiment demos that provide a good starting point for building your experiment.
+
+### Pavlovia
+
+After installing PsychoPy, the next step in getting an online experiment running is [setting up an account on Pavlovia](https://gitlab.pavlovia.org/users/sign_in). **Note**: In order for the account to fall under the UCF site license,
+the associated email must have the \*\@ucf.edu domain. Best practice is to use the email of the faculty member in charge of the lab. This ensures that the faculty member retains admin control of the account. The account username and password will likely need to be provided to students to allow them to develop and access experiments on Pavlovia, and the username and password need not correspond to the faculty email or any existing passwords. Notification settings can also be changed on [Pavlovia](https://gitlab.pavlovia.org/profile/emails) to control where the various types of email notifications are directed.  
+
+### SONA
+
+
+## Frequently Asked Questions (FAQs)
+
+While many issues one might encounter are addressed in the [documentation](https://www.psychopy.org/documentation.html), keep in mind that, as with all free open-source software, PsychoPy and Pavlovia are perpetually under development and there will be bugs. Multiple resources exist to facilitate solving such problems -- the [PsychoPy Forum](https://discourse.psychopy.org/) is home to a growing and very helpful community, UCF Psychology 
+will be adding a private discussion board (to be added later) specifically for helping each other use PsychoPy -- but ultimately the how-to of building your experiment falls to you, the researcher. A few common questions have, however, been addressed below, and suggestions for addition to this list are always welcomed.
+
+
+(@) How do I 
+
+asdf
+
+
+(@) Can I collect restricted data using PsychoPy?
+
+No. While the program itself allows for the collection of many kinds of data, including survey, the data storage of Pavlovia does not meet UCF's InfoSec requirements for sensitive or identifiable data. 
+
+
+(@) What can I do if I need to collect restricted data then?
+
+Additional questions can be added to SONA's intake questionnaire to securely collect sensitive or identifiable data.
+
+(@) 
