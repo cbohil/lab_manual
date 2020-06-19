@@ -141,7 +141,12 @@
 <li class="chapter" data-level="9.1.2" data-path="psychopy.html"><a href="psychopy.html#pavlovia"><i class="fa fa-check"></i><b>9.1.2</b> Pavlovia</a></li>
 <li class="chapter" data-level="9.1.3" data-path="psychopy.html"><a href="psychopy.html#sona-1"><i class="fa fa-check"></i><b>9.1.3</b> SONA</a></li>
 </ul></li>
-<li class="chapter" data-level="9.2" data-path="psychopy.html"><a href="psychopy.html#frequently-asked-questions-faqs"><i class="fa fa-check"></i><b>9.2</b> Frequently Asked Questions (FAQs)</a></li>
+<li class="chapter" data-level="9.2" data-path="psychopy.html"><a href="psychopy.html#frequently-asked-questions-faqs"><i class="fa fa-check"></i><b>9.2</b> Frequently Asked Questions (FAQs)</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="psychopy.html"><a href="psychopy.html#compliance"><i class="fa fa-check"></i><b>9.2.1</b> Compliance</a></li>
+<li class="chapter" data-level="9.2.2" data-path="psychopy.html"><a href="psychopy.html#technical"><i class="fa fa-check"></i><b>9.2.2</b> Technical</a></li>
+<li class="chapter" data-level="9.2.3" data-path="psychopy.html"><a href="psychopy.html#miscellaneous"><i class="fa fa-check"></i><b>9.2.3</b> Miscellaneous</a></li>
+</ul></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -185,17 +190,56 @@ the associated email must have the *@ucf.edu domain. Best practice is to use the
 <h2><span class="header-section-number">9.2</span> Frequently Asked Questions (FAQs)</h2>
 <p>While many issues one might encounter are addressed in the <a href="https://www.psychopy.org/documentation.html">documentation</a>, keep in mind that, as with all free open-source software, PsychoPy and Pavlovia are perpetually under development and there will be bugs. Multiple resources exist to facilitate solving such problems – the <a href="https://discourse.psychopy.org/">PsychoPy Forum</a> is home to a growing and very helpful community, UCF Psychology
 will be adding a private discussion board (to be added later) specifically for helping each other use PsychoPy – but ultimately the how-to of building your experiment falls to you, the researcher. A few common questions have, however, been addressed below, and suggestions for addition to this list are always welcomed.</p>
+<div id="compliance" class="section level3" number="9.2.1">
+<h3><span class="header-section-number">9.2.1</span> Compliance</h3>
 <ol class="example" style="list-style-type: decimal">
-<li>How do I</li>
+<li>Can I collect restricted data using PsychoPy?</li>
 </ol>
-<p>asdf</p>
+<p>No. While the program itself allows for the collection of many kinds of data, including survey, the data storage of Pavlovia does not meet UCF’s InfoSec requirements for sensitive or identifiable data.<br />
+<br />
+</p>
 <ol start="2" class="example" style="list-style-type: decimal">
-<li><p>Can I collect restricted data using PsychoPy?  
-No. While the program itself allows for the collection of many kinds of data, including survey, the data storage of Pavlovia does not meet UCF’s InfoSec requirements for sensitive or identifiable data.</p></li>
-<li><p>What can I do if I need to collect restricted data?</p></li>
+<li>What can I do if I need to collect restricted data then?</li>
 </ol>
-<p>SONA</p>
+<p>Additional questions can be added to SONA’s intake questionnaire to securely collect sensitive or identifiable data.</p>
+</div>
+<div id="technical" class="section level3" number="9.2.2">
+<h3><span class="header-section-number">9.2.2</span> Technical</h3>
+<ol start="3" class="example" style="list-style-type: decimal">
+<li>Is there a built-in component for providing feedback based on participants’ responses?</li>
+</ol>
+<p>Astonishingly, no. The way to provide corrective feedback is using the <a href="https://www.psychopy.org/builder/components/code.html">Code Component</a>. An example of the Python code necessary is provided below. Note that the strings used are f-strings – this is necessary for successful translation to JS.</p>
+<p>In Begin Experiment:<br />
+<code>msg=''  #msg variable just needs some value at start</code><br />
+</p>
+<p>In Begin Routine:<br />
+<code>if not resp.keys: # failed to respond</code><br />
+  <code>msg="Repeat trial. Use the labelled keys."</code><br />
+<code>elif resp.corr: #stored on last run routine</code><br />
+  <code>msg=f"Correct! \n\nAnswer: {AnswerName}"</code><br />
+<code>elif not resp.corr: #wrong answer</code><br />
+  <code>msg=f"Wrong. \n\nAnswer: {AnswerName}"</code><br />
+</p>
+<p>In End Routine: (If repeating trials without responses)<br />
+<code>if not resp.keys:</code><br />
+  <code>repeatTrial.finished = False # "repeatTrial" must be "trials" in the JS code</code><br />
+<code>else:</code><br />
+  <code>repeatTrial.finished = True</code><br />
+<br />
+</p>
+<ol start="4" class="example" style="list-style-type: decimal">
+<li>Why does my feedback work in Python but not in JS?</li>
+</ol>
+<p>The built-in Python-&gt;JS translator is good but not perfect. Be sure you are using f-strings</p>
+<ol start="5" class="example" style="list-style-type: decimal">
+<li>Why are my stimulus image files not being read into my experiment for presentation?</li>
+</ol>
+<p>PsychoPy’s pathing is picky - be sure your image files (.PNG, .wav, etc.) are in the root directory with your experiment file (.psyexp or .py) and your conditions file(s) (.csv, .xlsx, etc.)</p>
+</div>
+<div id="miscellaneous" class="section level3" number="9.2.3">
+<h3><span class="header-section-number">9.2.3</span> Miscellaneous</h3>
 
+</div>
 </div>
 </div>
             </section>
