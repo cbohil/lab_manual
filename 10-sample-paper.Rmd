@@ -1,0 +1,73 @@
+# Sample paper {#sample_paper}
+
+This paper is an example for demonstrating all the usual steps in creating a paper - in particular the results section.  The goal will be to demonstrate (and develop) tools needed to a) format data, b) visualize trends in data, c) perform statistical analyses, and d) perform some more specialized analyses (e.g., computational modeling, fNIRS analysis).
+
+## Road map
+
+1. Introduction/literature review section should list:
+    i) Study design, including independent variables (and their levels **and measurement scale**), dependent variables, and covariates (additional measures to either control for or examine correlation with primary variables)
+    ii) Each hypothesis and the basis for it (e.g., theory ,literature, our previous papers, etc.)
+    iii) Clear DIRECTIONAL predictions for variables included in the current research.[^1]
+2. Methods
+3. Results (confirmatory [i.e., planned] analysis first, then exploratory analysis if any)
+    i) Analysis 1 (e.g., accuracy rates for each group; ANOVA main effect).  Analysis 1 result.  Hypothesis supported or not? 
+    ii) Analysis 2 (e.g., Factor 2 main effect of levels?).  Analysis 2 result.  Implications for hypotheses?
+    iii) Etc. for each planned type of analyis for each variable (planned analysis, result, status of hypothesis based on this result)
+    iv) Describe any exploratory analysis conducted, findings, and implications[^2]
+4. Discussion/Conclusions.  Summarize (in list form) your conclusions about the patterns found in the data and your conclusions about all hypotheses based on these data.  Then consider any exploratory analysis conducted and its implications.  
+
+### Project road map
+
+1. Intro/lit review
+2. Methods
+3. Results
+4. Discussion/Conclusions 
+
+
+
+## Intro/lit review
+
+
+## Methods
+
+
+## Results
+
+### Experiment 1
+
+#### Data preprocessing
+
+[Read in data](https://r4ds.had.co.nz/data-import.html) and organize for analysis.  Data is usually stored in ["Tidy" format](https://r4ds.had.co.nz/tidy-data.html), or you should put it into Tidy format after reading it in.  This makes data easy to view and modify.  
+
+However, Tidy format usually means the data are in Wide format.  This is easy to work with and easy to examine.  But for plotting and statistical analysis, you usually need the data in **long format**.  So after reading in data and arranging into Tidy, wide format, make a copy of the data in long format to be used in visualization and statistics. 
+
+Here are some examples of converting from wide to long format: [[1]](https://www.theanalysisfactor.com/wide-and-long-data/), [[2]](http://www.cookbook-r.com/Manipulating_data/Converting_data_between_wide_and_long_format/); to see how to do this using the tidyverse, see [section 12.3 Pivoting](https://r4ds.had.co.nz/tidy-data.html#pivoting) in [R for Data Science](https://r4ds.had.co.nz/)
+
+None of this will appear in the manuscript of course.  So all the R code chunks should include the tag 'include = FALSE', meaning the code and its output don't show up in the knitted version of the paper.
+
+Note on lists: I recommend that for each experiment in the paper, you create a separate "list" object to store all the data and output specific to that experiment.  If there is an experiment 2 reported, you may want to re-run a lot of the same analyses in both experiments.  If you keep the same variable names across experiments, then earlier values get overwritten by later ones, which could create a lot of problems.  After all analyses have been conducted, you should be able to examine the input and output values for each experiment reported.  
+
+
+
+#### Visualization
+
+#### Statistical Analyiss
+
+
+## Discussion/Conclusions
+
+
+
+
+
+
+
+
+  
+[^1]: Directional means our predictions should be specific enough to say, e.g., Factor A level 1 should be > level 2.  It is rarely the case that we should state a non-directional hypothesis (e.g., Factor A level 1 will differ from level 2).  What a lame "hypothesis".  If we don't have a basis for some expectation, then why are we spending time and resources to carry out this research?  Of course, in the context of a research project there might be included a variable that is exploratory and for which we will "see if there's a difference", but in that case we don't really have anything resembling a "hypothesis", and it alone wouldn't form a sufficient basis for a study.  (Yes, some research is not hypothesis driven but again that will be very rare in our lab.) 
+  
+[^2]: Note the implications for hypotheses will not really tend to be elaborated on in depth in the results section, although they might be briefly mentioned.  E.g., As predicted, accuracy improved more rapidly over blocks in group 1 than group 2.  
+  
+  
+  
+  
