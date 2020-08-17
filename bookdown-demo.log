@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 2.9.7440 64-bit) (preloaded format=xelatex 2020.6.21)  16 AUG 2020 20:43
+This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 2.9.7440 64-bit) (preloaded format=xelatex 2020.6.21)  16 AUG 2020 20:49
 entering extended mode
 **./bookdown-demo.tex
 (bookdown-demo.tex
@@ -964,21 +964,21 @@ LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
 
 ]
 Chapter 2.
+[7]
+Underfull \vbox (badness 1178) has occurred while \output is active []
+
+[8] [9] [10
+
+]
+Chapter 3.
 
 Underfull \vbox (badness 3039) has occurred while \output is active []
 
-[7] [8]
-Chapter 3.
-[9
-
-]
-Underfull \vbox (badness 1178) has occurred while \output is active []
-
-[10] [11] [12
-
-]
+[11] [12]
 Chapter 4.
-[13] [14]
+[13
+
+] [14]
 File: bookdown-demo_files/figure-latex/nice-fig-1.pdf Graphic file (type pdf)
 <use bookdown-demo_files/figure-latex/nice-fig-1.pdf>
 [15] [16]
@@ -1071,7 +1071,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  19103 strings out of 414076
  332905 string characters out of 2893752
- 784075 words of memory out of 3000000
+ 784076 words of memory out of 3000000
  36481 multiletter control sequences out of 15000+200000
  538845 words of font info for 84 fonts, out of 3000000 for 9000
  1348 hyphenation exceptions out of 8191
