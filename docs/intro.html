@@ -156,8 +156,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.6" data-path="essential-reading.html"><a href="essential-reading.html#productivitygood-research-habits"><i class="fa fa-check"></i><b>3.6</b> Productivity/Good Research Habits</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>4</b> Data Analysis</a><ul>
-<li class="chapter" data-level="4.1" data-path="intro.html"><a href="intro.html#github-repositories"><i class="fa fa-check"></i><b>4.1</b> GitHub Repositories</a></li>
+<li class="chapter" data-level="4.1" data-path="intro.html"><a href="intro.html#analysis-tools"><i class="fa fa-check"></i><b>4.1</b> Analysis tools</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="intro.html"><a href="intro.html#jasp"><i class="fa fa-check"></i><b>4.1.1</b> JASP</a></li>
+<li class="chapter" data-level="4.1.2" data-path="intro.html"><a href="intro.html#jasp-books"><i class="fa fa-check"></i><b>4.1.2</b> JASP books</a></li>
+<li class="chapter" data-level="4.1.3" data-path="intro.html"><a href="intro.html#rrstudiogithub"><i class="fa fa-check"></i><b>4.1.3</b> R/RStudio/GitHub</a></li>
+</ul></li>
 <li class="chapter" data-level="4.2" data-path="intro.html"><a href="intro.html#steps-in-every-analysis"><i class="fa fa-check"></i><b>4.2</b> Steps in every analysis</a></li>
+<li class="chapter" data-level="4.3" data-path="intro.html"><a href="intro.html#confirmatory-vs.-exploratory-analysis"><i class="fa fa-check"></i><b>4.3</b> Confirmatory vs. Exploratory analysis</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="writing.html"><a href="writing.html"><i class="fa fa-check"></i><b>5</b> Writing</a><ul>
 <li class="chapter" data-level="5.1" data-path="getting-started.html"><a href="getting-started.html#general-advice"><i class="fa fa-check"></i><b>5.1</b> General advice</a></li>
@@ -227,270 +232,157 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="intro" class="section level1">
 <h1><span class="header-section-number">Chapter 4</span> Data Analysis</h1>
-<div id="github-repositories" class="section level2">
-<h2><span class="header-section-number">4.1</span> GitHub Repositories</h2>
-<p>what to put on github
-what NOT to put on github
-where to put files - R drive; OneDrive; Google Drive
-where to put code - local &amp; repo
-* no data, no output; should be able to regenerate these with 1 click
-* folder structure: data; output, code (functions only)
-+ sructure of a project
-- .rmd files on root directory
-- output directory
-- code direcotry: R code files containing functions that you call
-- all other R code should be right in the rmd file
-- SOURCE dependencies (code in R folder) at top of .rmd file that needs them, along with libraries needed for that file.
-* how to ignore something: GitIgore (how to add to it: folders; file types, specific files)</p>
+<div id="analysis-tools" class="section level2">
+<h2><span class="header-section-number">4.1</span> Analysis tools</h2>
+<div id="jasp" class="section level3">
+<h3><span class="header-section-number">4.1.1</span> JASP</h3>
+<p>I recommend if you are new to data analysis (and even if you’re not) to start with JASP.<br />
+- <a href="https://jasp-stats.org/" class="uri">https://jasp-stats.org/</a>
+- JASP is freely available software that contains methods for completing most major types of statistical analysis, along with some very sophisticated analysis tools.
+- JASP is easy to use
+- JASP contains methods for completing “parametric” statistical analyses (ANOVA, ttest, regression) which assumes your data are continuous value &amp; approximately normally distributed. If these assumptions are violated, JASP also contains “nonparametric” tests that are equivalents of the parametric versions.
+- JASP also does Bayesian versions of all the major analyses (in addition to the traditional “frequentist” versions)</p>
+</div>
+<div id="jasp-books" class="section level3">
+<h3><span class="header-section-number">4.1.2</span> JASP books</h3>
+<ul>
+<li>The JASP website also contains several excellent statistics manuals that are freely-available on their website. These are ideal for beginners.</li>
+<li><a href="https://jasp-stats.org/teaching-with-jasp/" class="uri">https://jasp-stats.org/teaching-with-jasp/</a></li>
+<li>In particular see the JASP Manuals section books:
+– Statistical Analysis in JASP. A Guide for Students by Mark Goss-Sampson (PDF)
+– Bayesian Inference in JASP: A Guide for Students</li>
+<li>Both of these books provide step-by-step how-to guides to a) choose the correct analysis for your situation (data type &amp; research question), b) complete the analysis in JASP, and c) how to report the results.</li>
+<li>I recommend you follow the JASP examples and write a summary for each completed analysis right there in the JASP file. When you need to write your results section, just copy/paste these into the document and work on transitions between sections!
+– Learning Statistics with JASP: A Tutorial for Psychology Students and Other Beginners</li>
+<li>This book provides a very accessible explanation to many of the concepts underlying statistical analysis. The other books mentioned above offer step-by-step how to’s, whereas this book provides a deeper explanation. This is essential reading since you’ll need to be able to justify any decisions you make about statistical methods used and interpretations of those (which is always a contentious part of peer review).</li>
+</ul>
+</div>
+<div id="rrstudiogithub" class="section level3">
+<h3><span class="header-section-number">4.1.3</span> R/RStudio/GitHub</h3>
+<p>One of our goals is to create reproducible research. This means that you could give someone your data and analysis files and they could re-run your analyses and get the identical results.This is possible in programs like JASP, but a scripting language like R is much better for this. I recommend starting with JASP in order to become productive right away, but over time you should learn to use R and carry out much of your analysis by writing code. This is invaluable - even within the lab for sharing or collaborating on projects.</p>
+<p>I suggest analyzing your data in JASP, then trying to get R to do the same things (data manipulation, visualization, statistical tests). Over time you should build routines that allow you to do much of what you want to do in R and not worry about using JASP (although I increasingly see a value in using both since JASP is so powerful and easy to use; it serves as a check on your R code).</p>
+<p>Your (long-term) goal should ultimately be to complete all data analysis in code, with literally NOTHING done by hand (e.g., data manipulation)!</p>
+<p>Start by installing R/RStudio on your computer
+- <a href="https://rstudio.com/products/rstudio/" class="uri">https://rstudio.com/products/rstudio/</a></p>
+<p>Some great resources for getting started
+- <a href="https://www.statmethods.net/index.html" class="uri">https://www.statmethods.net/index.html</a>
+- <a href="https://rstudio.com/resources/cheatsheets/" class="uri">https://rstudio.com/resources/cheatsheets/</a>
+- Book: R for data science: <a href="https://r4ds.had.co.nz/" class="uri">https://r4ds.had.co.nz/</a>
+- <a href="https://www.tidyverse.org/" class="uri">https://www.tidyverse.org/</a></p>
+<p>Of course - you should take advantage of all the resources already created by other lab members (e.g., the cdlutilities package on github) and all the packages created by others that are freely available (e.g., the tidyverse)</p>
+</div>
 </div>
 <div id="steps-in-every-analysis" class="section level2">
 <h2><span class="header-section-number">4.2</span> Steps in every analysis</h2>
+<p>Every analysis you carry out should include several steps in approximately this order:</p>
 <ol style="list-style-type: decimal">
-<li><p>Read in data, get into Tidy format</p></li>
-<li><p>Manipulate data as needed</p></li>
-<li><p>Visualize data</p></li>
+<li>Variable types: What is the scale of your variables? (e.g., continuous, discrete; interval, ordinal, nominal)</li>
+<li>Tidy data: Put your data in tidy format. This usually means 1 observation/row and independent/dependent variables in each column.</li>
 </ol>
-<p>use ggplot2 package</p>
-<p>Always do this before any statistical analysis. Look at the data to see what is going on. After that you can do statistical analysis (e.g., ANOVA/regression, t-tests, etc.) to see if any obsered differences are large enough to be considered reliable (i.e., “statistically significant”).</p>
-<p>You should have plots summarizing each of your variables, as well as combinations of variables that are obviously of importance (e.g., block x accuracy)</p>
-<p>Types of plots for variable types:
-- 2 continuous variables (e.g., age, height): scatterplot (GGPLOT); line (GGPLOT)
-etc…</p>
-<ol start="4" style="list-style-type: decimal">
-<li>Statistical analysis</li>
+<ul>
+<li><a href="https://vita.had.co.nz/papers/tidy-data.pdf" class="uri">https://vita.had.co.nz/papers/tidy-data.pdf</a></li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li>Visualize: Visualize the data (make plots to see distribution of each variable including outliers, correlation between variables, Q-Q plots to assess normality)</li>
+<li>Descriptive analysis: Carry out descriptive analyses (means, medians, and especially look for violations of normality)</li>
+<li>Question: What question are you trying to answer? Whether groups differ? Whether they are correlated? Whether they differ from 0? See the book by Goss-Sampson (cited above from the JASP website) - it contains an invaluable Appendix with guidance on which test goes with which question, as well as guidance about what to do if normality is violated in your data</li>
+<li>Inferential stats: Carry out the appropriate inferential statistical test. Always make plots within each analysis!</li>
+<li>Interpret results: I recommend you follow the examples in the Goss-Sampson book for each analysis and write a summary of the results right there in the JASP file (just as they do in the JASP example analysis files). If you’re working in R, carry out all analysis in an R Markdown (.RMD) file that includes analysis script as well as interpretation text.</li>
 </ol>
-<blockquote>
-<blockquote>
-<p>data analysis
-1) - scale types: ALWAYS consider first!
-metric, ordinal, etc
-need to know this for plotting and statistical analysis
-2) - long form vs wide form data; transforming between these
-important for plotting, ANOVA,
-2.5) data assumption: normally distributed? y = data; completely unknown; normal? tests
-3) general linear model
-correlation; simple regression, multiple regression
-&gt; prediction- yes! causation - no!
-&gt; causation - need experiment (control timing of cause(s)!! (only way w obs data = SEM/BAYES NETS)
-ttest logic
-anova logic
-ANOVA is a special case of regression with dichotomos predictors! (same mathematical model)
-what is the linear model doing? linear equation + normally distributed noise
-&gt; assumption of the model - normally distributed data ==&gt; the NOISE!! (unexplained variance part).</p>
-</blockquote>
-</blockquote>
-<p>how do do anovas/regression w software
-&gt;&gt; spss
-&gt;&gt; jasp
-&gt;&gt; R</p>
-<p>how to interpret &amp; report results (APA style; what to report; how to INTERPRET!)
-&gt;&gt; ANOVA
-&gt;&gt; regression?</p>
-<blockquote>
-<p>what if assumptions are violated?
-&gt; nonparametric statistical tests (robust to violations)</p>
-</blockquote>
-<p>frequentist (classical) vs bayesian statistics
-&gt;&gt; why? replicability!
-&gt;&gt; problems w classical (multiple comparisons; null hypothesis not what we want, no peeking/cheating!)
-&gt;&gt; problems solved by bayesian
-&gt;&gt; is NHST/classical worthless? NO!! its just that bayesian seems to be BETTER (more reliable by avoiding some of the problems that reduce reliability in terms of reproducability (replicability)
-&gt; statistics is about REPLICATILBITY
-&gt; replicability is about what is true!<br />
-&gt; we want to avoid publishig things that are not true! we want us (and others) to be able to replcate; bayesian may help us play it safer</p>
-<p>so what do we do in stats? 2 things
-1) estimation (e.g., mean, variance, difference between groups, learning rate, regreession coefficient)
-2) inference (e.g., difference between groups? effect of treatement? theory/model 1 better than theory/model 2?)
-note: both classical and bayesian apply the SAME MODEL!! GENERAL LINEAR MODEL
-&gt;&gt; they differ in terms of how they ESTIAMTE the parameters of the model(s)
-&gt;&gt; they differ in how we INTERPET THE RESULTS (i.e., make infernces from the data!)</p>
-<ol start="5" style="list-style-type: decimal">
-<li>Data modeling</li>
-</ol>
-<p>misc
-&gt;&gt; switching between long &amp; short data types
-&gt;&gt; page for this? blog post demonstrations? both?
-&gt;&gt; important: data types -boring but essential; need to master this as it underlies proper use of functions and many errors are related to mis-use</p>
-<p>You can label chapter and section titles using <code>{#label}</code> after them, e.g., we can reference Chapter <a href="intro.html#intro">4</a>. If you do not manually label them, there will be automatic labels anyway, e.g., Chapter <a href="sample-paper.html#methods">10.3</a>.</p>
-<p>Figures and tables with captions will be placed in <code>figure</code> and <code>table</code> environments, respectively.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="kw">par</span>(<span class="dt">mar =</span> <span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">4</span>, <span class="fl">.1</span>, <span class="fl">.1</span>))</a>
-<a class="sourceLine" id="cb2-2" title="2"><span class="kw">plot</span>(pressure, <span class="dt">type =</span> <span class="st">&#39;b&#39;</span>, <span class="dt">pch =</span> <span class="dv">19</span>)</a></code></pre></div>
-<div class="figure" style="text-align: center"><span id="fig:nice-fig"></span>
-<img src="bookdown-demo_files/figure-html/nice-fig-1.png" alt="Here is a nice figure!" width="80%" />
-<p class="caption">
-Figure 4.1: Here is a nice figure!
-</p>
+<p>See the JASP books cited above for examples and guidance on how to carry out each of these steps</p>
 </div>
-<p>Reference a figure by its code chunk label with the <code>fig:</code> prefix, e.g., see Figure <a href="intro.html#fig:nice-fig">4.1</a>. Similarly, you can reference tables generated from <code>knitr::kable()</code>, e.g., see Table <a href="intro.html#tab:nice-tab">4.1</a>.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1">knitr<span class="op">::</span><span class="kw">kable</span>(</a>
-<a class="sourceLine" id="cb3-2" title="2">  <span class="kw">head</span>(iris, <span class="dv">20</span>), <span class="dt">caption =</span> <span class="st">&#39;Here is a nice table!&#39;</span>,</a>
-<a class="sourceLine" id="cb3-3" title="3">  <span class="dt">booktabs =</span> <span class="ot">TRUE</span></a>
-<a class="sourceLine" id="cb3-4" title="4">)</a></code></pre></div>
-<table>
-<caption><span id="tab:nice-tab">Table 4.1: </span>Here is a nice table!</caption>
-<thead>
-<tr class="header">
-<th align="right">Sepal.Length</th>
-<th align="right">Sepal.Width</th>
-<th align="right">Petal.Length</th>
-<th align="right">Petal.Width</th>
-<th align="left">Species</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="right">5.1</td>
-<td align="right">3.5</td>
-<td align="right">1.4</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">4.9</td>
-<td align="right">3.0</td>
-<td align="right">1.4</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">4.7</td>
-<td align="right">3.2</td>
-<td align="right">1.3</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">4.6</td>
-<td align="right">3.1</td>
-<td align="right">1.5</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">5.0</td>
-<td align="right">3.6</td>
-<td align="right">1.4</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">5.4</td>
-<td align="right">3.9</td>
-<td align="right">1.7</td>
-<td align="right">0.4</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">4.6</td>
-<td align="right">3.4</td>
-<td align="right">1.4</td>
-<td align="right">0.3</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">5.0</td>
-<td align="right">3.4</td>
-<td align="right">1.5</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">4.4</td>
-<td align="right">2.9</td>
-<td align="right">1.4</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">4.9</td>
-<td align="right">3.1</td>
-<td align="right">1.5</td>
-<td align="right">0.1</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">5.4</td>
-<td align="right">3.7</td>
-<td align="right">1.5</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">4.8</td>
-<td align="right">3.4</td>
-<td align="right">1.6</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">4.8</td>
-<td align="right">3.0</td>
-<td align="right">1.4</td>
-<td align="right">0.1</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">4.3</td>
-<td align="right">3.0</td>
-<td align="right">1.1</td>
-<td align="right">0.1</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">5.8</td>
-<td align="right">4.0</td>
-<td align="right">1.2</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">5.7</td>
-<td align="right">4.4</td>
-<td align="right">1.5</td>
-<td align="right">0.4</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">5.4</td>
-<td align="right">3.9</td>
-<td align="right">1.3</td>
-<td align="right">0.4</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">5.1</td>
-<td align="right">3.5</td>
-<td align="right">1.4</td>
-<td align="right">0.3</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">5.7</td>
-<td align="right">3.8</td>
-<td align="right">1.7</td>
-<td align="right">0.3</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">5.1</td>
-<td align="right">3.8</td>
-<td align="right">1.5</td>
-<td align="right">0.3</td>
-<td align="left">setosa</td>
-</tr>
-</tbody>
-</table>
-<p>You can write citations, too. For example, we are using the <strong>bookdown</strong> package <span class="citation">(Xie <a href="#ref-R-bookdown" role="doc-biblioref">2020</a>)</span> in this sample book, which was built on top of R Markdown and <strong>knitr</strong> <span class="citation">(Xie <a href="#ref-xie2015" role="doc-biblioref">2015</a>)</span>.</p>
+<div id="confirmatory-vs.-exploratory-analysis" class="section level2">
+<h2><span class="header-section-number">4.3</span> Confirmatory vs. Exploratory analysis</h2>
+<ul>
+<li>Confirmatory analysis: Start by testing the hypotheses that led you to design your study as you did. This is probably reflected in the independent and dependent variables you chose to include in the study. Why else would you include a variable in your study if you don’t intend to measure it. (Sometimes this does happen - you need to be clear in the writing about why you did that).</li>
+<li>When you carry out confirmatory (i.e., planned) analyses, you have to be conservative in how you carry out your statistical analyses. For example, you shouldn’t do anything to your data (e.g., unexpected group splits) before completing the basic analyses and seeing how things worked out (don’t short-circuit your analyses half way through if you don’t think things appear to be working out; complete all planned analyses first!). If you conduct an ANOVA, your post-hoc comparisons need to be a) limited to what was found significant in an omnibus test and b) corrected for multiple comparisons</li>
+<li>AFTER you have completed your planned (confirmatory) analyses, feel free to do all the exploratory analysis you like! You just have make it clear when you write/present your results that you are switching from confiratory to exploratory analysis. If you do that, then the reader knows to take the exploratory findings with a grain of salt. Exploratory analyses are important and may suggest new hypotheses, but these hypotheses usually require a new study to provide a proper test.</li>
+</ul>
+<!-- ## GitHub Repositories -->
+<!-- what to put on github -->
+<!-- what NOT to put on github -->
+<!-- where to put files - R drive; OneDrive; Google Drive -->
+<!-- where to put code - local & repo -->
+<!-- * no data, no output; should be able to regenerate these with 1 click -->
+<!-- * folder structure: data; output, code (functions only) -->
+<!-- +  sructure of a project -->
+<!-- - .rmd files on root directory -->
+<!-- - output directory -->
+<!-- - code direcotry: R code files containing functions that you call -->
+<!-- - all other R code should be right in the rmd file -->
+<!-- - SOURCE dependencies (code in R folder) at top of .rmd file that needs them, along with libraries needed for that file. -->
+<!-- * how to ignore something: GitIgore (how to add to it: folders; file types, specific files) -->
+<!-- ## Steps in every analysis -->
+<!-- 1) Read in data, get into Tidy format -->
+<!-- 2) Manipulate data as needed -->
+<!-- 3) Visualize data -->
+<!-- use ggplot2 package -->
+<!-- Always do this before any statistical analysis.  Look at the data to see what is going on.  After that you can do statistical analysis (e.g., ANOVA/regression, t-tests, etc.) to see if any obsered differences are large enough to be considered reliable (i.e., "statistically significant").  -->
+<!-- You should have plots summarizing each of your variables, as well as combinations of variables that are obviously of importance (e.g., block x accuracy) -->
+<!-- Types of plots for variable types: -->
+<!-- - 2 continuous variables (e.g., age, height): scatterplot (GGPLOT); line (GGPLOT) -->
+<!-- etc... -->
+<!-- 4) Statistical analysis -->
+<!-- >> data analysis -->
+<!-- 1) - scale types: ALWAYS consider first! -->
+<!-- > metric, ordinal, etc -->
+<!-- > need to know this for plotting and statistical analysis -->
+<!-- 2) - long form vs wide form data; transforming between these -->
+<!-- >> important for plotting, ANOVA,  -->
+<!-- 2.5) data assumption: normally distributed?  y = data; completely unknown; normal? tests -->
+<!-- 3) general linear model -->
+<!-- >> correlation; simple regression, multiple regression -->
+<!-- >>> prediction- yes!  causation - no! -->
+<!-- >>> causation - need experiment (control timing of cause(s)!! (only way w obs data = SEM/BAYES NETS) -->
+<!-- > ttest logic -->
+<!-- > anova logic -->
+<!-- > ANOVA is a special case of regression with dichotomos predictors! (same mathematical model) -->
+<!-- > what is the linear model doing?  linear equation + normally distributed noise -->
+<!-- >>> assumption of the model - normally distributed data ==> the NOISE!! (unexplained variance part).  -->
+<!-- >  -->
+<!-- how do do anovas/regression w software -->
+<!-- >> spss -->
+<!-- >> jasp -->
+<!-- >> R -->
+<!-- how to interpret & report results (APA style; what to report; how to INTERPRET!) -->
+<!-- >> ANOVA  -->
+<!-- >> regression?  -->
+<!-- > what if assumptions are violated?  -->
+<!-- >> nonparametric statistical tests (robust to violations) -->
+<!-- frequentist (classical) vs bayesian statistics -->
+<!-- >> why? replicability! -->
+<!-- >> problems w classical (multiple comparisons; null hypothesis not what we want, no peeking/cheating!)  -->
+<!-- >> problems solved by bayesian -->
+<!-- >> is NHST/classical worthless?  NO!!  its just that bayesian seems to be BETTER (more reliable by avoiding some of the problems that reduce reliability in terms of reproducability (replicability) -->
+<!-- > statistics is about REPLICATILBITY -->
+<!-- > replicability is about what is true!   -->
+<!-- > we want to avoid publishig things that are not true! we want us (and others) to be able to replcate; bayesian may help us play it safer -->
+<!-- so what do we do in stats? 2 things -->
+<!-- 1) estimation (e.g., mean, variance, difference between groups, learning rate, regreession coefficient) -->
+<!-- 2) inference (e.g., difference between groups?  effect of treatement? theory/model 1 better than theory/model 2?) -->
+<!-- note: both classical and bayesian apply the SAME MODEL!! GENERAL LINEAR MODEL -->
+<!-- >> they differ in terms of how they ESTIAMTE the parameters of the model(s) -->
+<!-- >> they differ in how we INTERPET THE RESULTS (i.e., make infernces from the data!) -->
+<!-- 5) Data modeling  -->
+<!-- misc -->
+<!-- >> switching between long & short data types -->
+<!-- >> page for this?  blog post demonstrations? both?  -->
+<!-- >> important: data types -boring but essential; need to master this as it underlies proper use of functions and many errors are related to mis-use -->
+<!-- You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(methods). -->
+<!-- Figures and tables with captions will be placed in `figure` and `table` environments, respectively. -->
+<!-- ```{r nice-fig, fig.cap='Here is a nice figure!', out.width='80%', fig.asp=.75, fig.align='center'} -->
+<!-- par(mar = c(4, 4, .1, .1)) -->
+<!-- plot(pressure, type = 'b', pch = 19) -->
+<!-- ``` -->
+<!-- Reference a figure by its code chunk label with the `fig:` prefix, e.g., see Figure \@ref(fig:nice-fig). Similarly, you can reference tables generated from `knitr::kable()`, e.g., see Table \@ref(tab:nice-tab). -->
+<!-- ```{r nice-tab, tidy=FALSE} -->
+<!-- knitr::kable( -->
+<!--   head(iris, 20), caption = 'Here is a nice table!', -->
+<!--   booktabs = TRUE -->
+<!-- ) -->
+<!-- ``` -->
+<!-- You can write citations, too. For example, we are using the **bookdown** package [@R-bookdown] in this sample book, which was built on top of R Markdown and **knitr** [@xie2015]. -->
 
-</div>
-</div>
-<h3>References</h3>
-<div id="refs" class="references">
-<div id="ref-xie2015">
-<p>Xie, Yihui. 2015. <em>Dynamic Documents with R and Knitr</em>. 2nd ed. Boca Raton, Florida: Chapman; Hall/CRC. <a href="http://yihui.name/knitr/">http://yihui.name/knitr/</a>.</p>
-</div>
-<div id="ref-R-bookdown">
-<p>Xie, Yihui. 2020. <em>Bookdown: Authoring Books and Technical Documents with R Markdown</em>. <a href="https://CRAN.R-project.org/package=bookdown">https://CRAN.R-project.org/package=bookdown</a>.</p>
 </div>
 </div>
             </section>

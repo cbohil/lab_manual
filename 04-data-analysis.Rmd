@@ -1,108 +1,68 @@
 # Data Analysis {#intro}
 
-## GitHub Repositories
+## Analysis tools
 
-what to put on github
-what NOT to put on github
-where to put files - R drive; OneDrive; Google Drive
-where to put code - local & repo
-* no data, no output; should be able to regenerate these with 1 click
-* folder structure: data; output, code (functions only)
-+  sructure of a project
-- .rmd files on root directory
-- output directory
-- code direcotry: R code files containing functions that you call
-- all other R code should be right in the rmd file
-- SOURCE dependencies (code in R folder) at top of .rmd file that needs them, along with libraries needed for that file.
-* how to ignore something: GitIgore (how to add to it: folders; file types, specific files)
+### JASP 
+I recommend if you are new to data analysis (and even if you're not) to start with JASP.  
+- https://jasp-stats.org/
+- JASP is freely available software that contains methods for completing most major types of statistical analysis, along with some very sophisticated analysis tools.
+- JASP is easy to use
+- JASP contains methods for completing "parametric" statistical analyses (ANOVA, ttest, regression) which assumes your data are continuous value & approximately normally distributed.  If these assumptions are violated, JASP also contains "nonparametric" tests that are equivalents of the parametric versions.
+- JASP also does Bayesian versions of all the major analyses (in addition to the traditional "frequentist" versions)
 
+### JASP books
+- The JASP website also contains several excellent statistics manuals that are freely-available on their website.  These are ideal for beginners.
+- https://jasp-stats.org/teaching-with-jasp/
+- In particular see the JASP Manuals section books:
+-- Statistical Analysis in JASP. A Guide for Students by Mark Goss-Sampson (PDF) 
+-- Bayesian Inference in JASP: A Guide for Students 
+- Both of these books provide step-by-step how-to guides to a) choose the correct analysis for your situation (data type & research question), b) complete the analysis in JASP, and c) how to report the results.
+- I recommend you follow the JASP examples and write a summary for each completed analysis right there in the JASP file.  When you need to write your results section, just copy/paste these into the document and work on transitions between sections!
+-- Learning Statistics with JASP: A Tutorial for Psychology Students and Other Beginners
+- This book provides a very accessible explanation to many of the concepts underlying statistical analysis.  The other books mentioned above offer step-by-step how to's, whereas this book provides a deeper explanation.  This is essential reading since you'll need to be able to justify any decisions you make about statistical methods used and interpretations of those (which is always a contentious part of peer review).
+
+### R/RStudio/GitHub
+
+One of our goals is to create reproducible research.  This means that you could give someone your data and analysis files and they could re-run your analyses and get the identical results.This is possible in programs like JASP, but a scripting language like R is much better for this.  I recommend starting with JASP in order to become productive right away, but over time you should learn to use R and carry out much of your analysis by writing code.  This is invaluable - even within the lab for sharing or collaborating on projects.   
+
+I suggest analyzing your data in JASP, then trying to get R to do the same things (data manipulation, visualization, statistical tests).  Over time you should build routines that allow you to do much of what you want to do in R and not worry about using JASP (although I increasingly see a value in using both since JASP is so powerful and easy to use; it serves as a check on your R code).   
+
+Your (long-term) goal should ultimately be to complete all data analysis in code, with literally NOTHING done by hand (e.g., data manipulation)!
+
+Start by installing R/RStudio on your computer
+- https://rstudio.com/products/rstudio/
+
+Some great resources for getting started
+- https://www.statmethods.net/index.html
+- https://rstudio.com/resources/cheatsheets/
+- Book: R for data science: https://r4ds.had.co.nz/ 
+- https://www.tidyverse.org/
+
+
+Of course - you should take advantage of all the resources already created by other lab members (e.g., the cdlutilities package on github) and all the packages created by others that are freely available (e.g., the tidyverse)
 
 ## Steps in every analysis
 
-1) Read in data, get into Tidy format
+Every analysis you carry out should include several steps in approximately this order:
 
-2) Manipulate data as needed
-
-3) Visualize data
-
-use ggplot2 package
-
-Always do this before any statistical analysis.  Look at the data to see what is going on.  After that you can do statistical analysis (e.g., ANOVA/regression, t-tests, etc.) to see if any obsered differences are large enough to be considered reliable (i.e., "statistically significant"). 
-
-You should have plots summarizing each of your variables, as well as combinations of variables that are obviously of importance (e.g., block x accuracy)
-
-Types of plots for variable types:
-- 2 continuous variables (e.g., age, height): scatterplot (GGPLOT); line (GGPLOT)
-etc...
-
-4) Statistical analysis
-
->> data analysis
-1) - scale types: ALWAYS consider first!
-> metric, ordinal, etc
-> need to know this for plotting and statistical analysis
-2) - long form vs wide form data; transforming between these
->> important for plotting, ANOVA, 
-2.5) data assumption: normally distributed?  y = data; completely unknown; normal? tests
-3) general linear model
->> correlation; simple regression, multiple regression
->>> prediction- yes!  causation - no!
->>> causation - need experiment (control timing of cause(s)!! (only way w obs data = SEM/BAYES NETS)
-> ttest logic
-> anova logic
-> ANOVA is a special case of regression with dichotomos predictors! (same mathematical model)
-> what is the linear model doing?  linear equation + normally distributed noise
->>> assumption of the model - normally distributed data ==> the NOISE!! (unexplained variance part). 
-> 
-
-how do do anovas/regression w software
->> spss
->> jasp
->> R
-
-how to interpret & report results (APA style; what to report; how to INTERPRET!)
->> ANOVA 
->> regression? 
-
-> what if assumptions are violated? 
->> nonparametric statistical tests (robust to violations)
-
-frequentist (classical) vs bayesian statistics
->> why? replicability!
->> problems w classical (multiple comparisons; null hypothesis not what we want, no peeking/cheating!) 
->> problems solved by bayesian
->> is NHST/classical worthless?  NO!!  its just that bayesian seems to be BETTER (more reliable by avoiding some of the problems that reduce reliability in terms of reproducability (replicability)
-> statistics is about REPLICATILBITY
-> replicability is about what is true!  
-> we want to avoid publishig things that are not true! we want us (and others) to be able to replcate; bayesian may help us play it safer
-
-so what do we do in stats? 2 things
-1) estimation (e.g., mean, variance, difference between groups, learning rate, regreession coefficient)
-2) inference (e.g., difference between groups?  effect of treatement? theory/model 1 better than theory/model 2?)
-note: both classical and bayesian apply the SAME MODEL!! GENERAL LINEAR MODEL
->> they differ in terms of how they ESTIAMTE the parameters of the model(s)
->> they differ in how we INTERPET THE RESULTS (i.e., make infernces from the data!)
+1) Variable types: What is the scale of your variables? (e.g., continuous, discrete; interval, ordinal, nominal)
+2) Tidy data: Put your data in tidy format.  This usually means 1 observation/row and independent/dependent variables in each column. 
+- https://vita.had.co.nz/papers/tidy-data.pdf
+3) Visualize: Visualize the data (make plots to see distribution of each variable including outliers, correlation between variables, Q-Q plots to assess normality)
+4) Descriptive analysis: Carry out descriptive analyses (means, medians, and especially look for violations of normality)
+5) Question: What question are you trying to answer?  Whether groups differ? Whether they are correlated?  Whether they differ from 0?  See the book by Goss-Sampson (cited above from the JASP website) - it contains an invaluable Appendix with guidance on which test goes with which question, as well as guidance about what to do if normality is violated in your data
+6) Inferential stats: Carry out the appropriate inferential statistical test.  Always make plots within each analysis! 
+7) Interpret results:  I recommend you follow the examples in the Goss-Sampson book for each analysis and write a summary of the results right there in the JASP file (just as they do in the JASP example analysis files).  If you're working in R, carry out all analysis in an R Markdown (.RMD) file that includes analysis script as well as interpretation text. 
 
 
+See the JASP books cited above for examples and guidance on how to carry out each of these steps
 
 
+## Confirmatory vs. Exploratory analysis
 
-
-
-5) Data modeling 
-
-
-
-
-
-
-
-
-
-misc
->> switching between long & short data types
->> page for this?  blog post demonstrations? both? 
->> important: data types -boring but essential; need to master this as it underlies proper use of functions and many errors are related to mis-use
+- Confirmatory analysis: Start by testing the hypotheses that led you to design your study as you did.  This is probably reflected in the independent and dependent variables you chose to include in the study. Why else would you include a variable in your study if you don't intend to measure it.  (Sometimes this does happen - you need to be clear in the writing about why you did that).
+- When you carry out confirmatory (i.e., planned) analyses, you have to be conservative in how you carry out your statistical analyses.  For example, you shouldn't do anything to your data (e.g., unexpected group splits) before completing the basic analyses and seeing how things worked out (don't short-circuit your analyses half way through if you don't think things appear to be working out; complete all planned analyses first!).  If you conduct an ANOVA, your post-hoc comparisons need to be a) limited to what was found significant in an omnibus test and b) corrected for multiple comparisons
+- AFTER you have completed your planned (confirmatory) analyses, feel free to do all the exploratory analysis you like!  You just have make it clear when you write/present your results that you are switching from confiratory to exploratory analysis.  If you do that, then the reader knows to take the exploratory findings with a grain of salt.  Exploratory analyses are important and may suggest new hypotheses, but these hypotheses usually require a new study to provide a proper test. 
 
 
 
@@ -119,22 +79,150 @@ misc
 
 
 
-You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(methods).
 
-Figures and tables with captions will be placed in `figure` and `table` environments, respectively.
 
-```{r nice-fig, fig.cap='Here is a nice figure!', out.width='80%', fig.asp=.75, fig.align='center'}
-par(mar = c(4, 4, .1, .1))
-plot(pressure, type = 'b', pch = 19)
-```
 
-Reference a figure by its code chunk label with the `fig:` prefix, e.g., see Figure \@ref(fig:nice-fig). Similarly, you can reference tables generated from `knitr::kable()`, e.g., see Table \@ref(tab:nice-tab).
 
-```{r nice-tab, tidy=FALSE}
-knitr::kable(
-  head(iris, 20), caption = 'Here is a nice table!',
-  booktabs = TRUE
-)
-```
 
-You can write citations, too. For example, we are using the **bookdown** package [@R-bookdown] in this sample book, which was built on top of R Markdown and **knitr** [@xie2015].
+
+
+
+
+<!-- ## GitHub Repositories -->
+
+<!-- what to put on github -->
+<!-- what NOT to put on github -->
+<!-- where to put files - R drive; OneDrive; Google Drive -->
+<!-- where to put code - local & repo -->
+<!-- * no data, no output; should be able to regenerate these with 1 click -->
+<!-- * folder structure: data; output, code (functions only) -->
+<!-- +  sructure of a project -->
+<!-- - .rmd files on root directory -->
+<!-- - output directory -->
+<!-- - code direcotry: R code files containing functions that you call -->
+<!-- - all other R code should be right in the rmd file -->
+<!-- - SOURCE dependencies (code in R folder) at top of .rmd file that needs them, along with libraries needed for that file. -->
+<!-- * how to ignore something: GitIgore (how to add to it: folders; file types, specific files) -->
+
+
+<!-- ## Steps in every analysis -->
+
+<!-- 1) Read in data, get into Tidy format -->
+
+<!-- 2) Manipulate data as needed -->
+
+<!-- 3) Visualize data -->
+
+<!-- use ggplot2 package -->
+
+<!-- Always do this before any statistical analysis.  Look at the data to see what is going on.  After that you can do statistical analysis (e.g., ANOVA/regression, t-tests, etc.) to see if any obsered differences are large enough to be considered reliable (i.e., "statistically significant").  -->
+
+<!-- You should have plots summarizing each of your variables, as well as combinations of variables that are obviously of importance (e.g., block x accuracy) -->
+
+<!-- Types of plots for variable types: -->
+<!-- - 2 continuous variables (e.g., age, height): scatterplot (GGPLOT); line (GGPLOT) -->
+<!-- etc... -->
+
+<!-- 4) Statistical analysis -->
+
+<!-- >> data analysis -->
+<!-- 1) - scale types: ALWAYS consider first! -->
+<!-- > metric, ordinal, etc -->
+<!-- > need to know this for plotting and statistical analysis -->
+<!-- 2) - long form vs wide form data; transforming between these -->
+<!-- >> important for plotting, ANOVA,  -->
+<!-- 2.5) data assumption: normally distributed?  y = data; completely unknown; normal? tests -->
+<!-- 3) general linear model -->
+<!-- >> correlation; simple regression, multiple regression -->
+<!-- >>> prediction- yes!  causation - no! -->
+<!-- >>> causation - need experiment (control timing of cause(s)!! (only way w obs data = SEM/BAYES NETS) -->
+<!-- > ttest logic -->
+<!-- > anova logic -->
+<!-- > ANOVA is a special case of regression with dichotomos predictors! (same mathematical model) -->
+<!-- > what is the linear model doing?  linear equation + normally distributed noise -->
+<!-- >>> assumption of the model - normally distributed data ==> the NOISE!! (unexplained variance part).  -->
+<!-- >  -->
+
+<!-- how do do anovas/regression w software -->
+<!-- >> spss -->
+<!-- >> jasp -->
+<!-- >> R -->
+
+<!-- how to interpret & report results (APA style; what to report; how to INTERPRET!) -->
+<!-- >> ANOVA  -->
+<!-- >> regression?  -->
+
+<!-- > what if assumptions are violated?  -->
+<!-- >> nonparametric statistical tests (robust to violations) -->
+
+<!-- frequentist (classical) vs bayesian statistics -->
+<!-- >> why? replicability! -->
+<!-- >> problems w classical (multiple comparisons; null hypothesis not what we want, no peeking/cheating!)  -->
+<!-- >> problems solved by bayesian -->
+<!-- >> is NHST/classical worthless?  NO!!  its just that bayesian seems to be BETTER (more reliable by avoiding some of the problems that reduce reliability in terms of reproducability (replicability) -->
+<!-- > statistics is about REPLICATILBITY -->
+<!-- > replicability is about what is true!   -->
+<!-- > we want to avoid publishig things that are not true! we want us (and others) to be able to replcate; bayesian may help us play it safer -->
+
+<!-- so what do we do in stats? 2 things -->
+<!-- 1) estimation (e.g., mean, variance, difference between groups, learning rate, regreession coefficient) -->
+<!-- 2) inference (e.g., difference between groups?  effect of treatement? theory/model 1 better than theory/model 2?) -->
+<!-- note: both classical and bayesian apply the SAME MODEL!! GENERAL LINEAR MODEL -->
+<!-- >> they differ in terms of how they ESTIAMTE the parameters of the model(s) -->
+<!-- >> they differ in how we INTERPET THE RESULTS (i.e., make infernces from the data!) -->
+
+
+
+
+
+
+
+<!-- 5) Data modeling  -->
+
+
+
+
+
+
+
+
+
+<!-- misc -->
+<!-- >> switching between long & short data types -->
+<!-- >> page for this?  blog post demonstrations? both?  -->
+<!-- >> important: data types -boring but essential; need to master this as it underlies proper use of functions and many errors are related to mis-use -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(methods). -->
+
+<!-- Figures and tables with captions will be placed in `figure` and `table` environments, respectively. -->
+
+<!-- ```{r nice-fig, fig.cap='Here is a nice figure!', out.width='80%', fig.asp=.75, fig.align='center'} -->
+<!-- par(mar = c(4, 4, .1, .1)) -->
+<!-- plot(pressure, type = 'b', pch = 19) -->
+<!-- ``` -->
+
+<!-- Reference a figure by its code chunk label with the `fig:` prefix, e.g., see Figure \@ref(fig:nice-fig). Similarly, you can reference tables generated from `knitr::kable()`, e.g., see Table \@ref(tab:nice-tab). -->
+
+<!-- ```{r nice-tab, tidy=FALSE} -->
+<!-- knitr::kable( -->
+<!--   head(iris, 20), caption = 'Here is a nice table!', -->
+<!--   booktabs = TRUE -->
+<!-- ) -->
+<!-- ``` -->
+
+<!-- You can write citations, too. For example, we are using the **bookdown** package [@R-bookdown] in this sample book, which was built on top of R Markdown and **knitr** [@xie2015]. -->

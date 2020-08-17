@@ -330,185 +330,111 @@ Here is a list of papers, book chapters, or books that everyone in the lab shoul
 \hypertarget{intro}{%
 \chapter{Data Analysis}\label{intro}}
 
-\hypertarget{github-repositories}{%
-\section{GitHub Repositories}\label{github-repositories}}
+\hypertarget{analysis-tools}{%
+\section{Analysis tools}\label{analysis-tools}}
 
-what to put on github
-what NOT to put on github
-where to put files - R drive; OneDrive; Google Drive
-where to put code - local \& repo
-* no data, no output; should be able to regenerate these with 1 click
-* folder structure: data; output, code (functions only)
-+ sructure of a project
-- .rmd files on root directory
-- output directory
-- code direcotry: R code files containing functions that you call
-- all other R code should be right in the rmd file
-- SOURCE dependencies (code in R folder) at top of .rmd file that needs them, along with libraries needed for that file.
-* how to ignore something: GitIgore (how to add to it: folders; file types, specific files)
+\hypertarget{jasp}{%
+\subsection{JASP}\label{jasp}}
+
+I recommend if you are new to data analysis (and even if you're not) to start with JASP.\\
+- \url{https://jasp-stats.org/}
+- JASP is freely available software that contains methods for completing most major types of statistical analysis, along with some very sophisticated analysis tools.
+- JASP is easy to use
+- JASP contains methods for completing ``parametric'' statistical analyses (ANOVA, ttest, regression) which assumes your data are continuous value \& approximately normally distributed. If these assumptions are violated, JASP also contains ``nonparametric'' tests that are equivalents of the parametric versions.
+- JASP also does Bayesian versions of all the major analyses (in addition to the traditional ``frequentist'' versions)
+
+\hypertarget{jasp-books}{%
+\subsection{JASP books}\label{jasp-books}}
+
+\begin{itemize}
+\tightlist
+\item
+  The JASP website also contains several excellent statistics manuals that are freely-available on their website. These are ideal for beginners.
+\item
+  \url{https://jasp-stats.org/teaching-with-jasp/}
+\item
+  In particular see the JASP Manuals section books:
+  -- Statistical Analysis in JASP. A Guide for Students by Mark Goss-Sampson (PDF)
+  -- Bayesian Inference in JASP: A Guide for Students
+\item
+  Both of these books provide step-by-step how-to guides to a) choose the correct analysis for your situation (data type \& research question), b) complete the analysis in JASP, and c) how to report the results.
+\item
+  I recommend you follow the JASP examples and write a summary for each completed analysis right there in the JASP file. When you need to write your results section, just copy/paste these into the document and work on transitions between sections!
+  -- Learning Statistics with JASP: A Tutorial for Psychology Students and Other Beginners
+\item
+  This book provides a very accessible explanation to many of the concepts underlying statistical analysis. The other books mentioned above offer step-by-step how to's, whereas this book provides a deeper explanation. This is essential reading since you'll need to be able to justify any decisions you make about statistical methods used and interpretations of those (which is always a contentious part of peer review).
+\end{itemize}
+
+\hypertarget{rrstudiogithub}{%
+\subsection{R/RStudio/GitHub}\label{rrstudiogithub}}
+
+One of our goals is to create reproducible research. This means that you could give someone your data and analysis files and they could re-run your analyses and get the identical results.This is possible in programs like JASP, but a scripting language like R is much better for this. I recommend starting with JASP in order to become productive right away, but over time you should learn to use R and carry out much of your analysis by writing code. This is invaluable - even within the lab for sharing or collaborating on projects.
+
+I suggest analyzing your data in JASP, then trying to get R to do the same things (data manipulation, visualization, statistical tests). Over time you should build routines that allow you to do much of what you want to do in R and not worry about using JASP (although I increasingly see a value in using both since JASP is so powerful and easy to use; it serves as a check on your R code).
+
+Your (long-term) goal should ultimately be to complete all data analysis in code, with literally NOTHING done by hand (e.g., data manipulation)!
+
+Start by installing R/RStudio on your computer
+- \url{https://rstudio.com/products/rstudio/}
+
+Some great resources for getting started
+- \url{https://www.statmethods.net/index.html}
+- \url{https://rstudio.com/resources/cheatsheets/}
+- Book: R for data science: \url{https://r4ds.had.co.nz/}
+- \url{https://www.tidyverse.org/}
+
+Of course - you should take advantage of all the resources already created by other lab members (e.g., the cdlutilities package on github) and all the packages created by others that are freely available (e.g., the tidyverse)
 
 \hypertarget{steps-in-every-analysis}{%
 \section{Steps in every analysis}\label{steps-in-every-analysis}}
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi})}
-\item
-  Read in data, get into Tidy format
-\item
-  Manipulate data as needed
-\item
-  Visualize data
-\end{enumerate}
-
-use ggplot2 package
-
-Always do this before any statistical analysis. Look at the data to see what is going on. After that you can do statistical analysis (e.g., ANOVA/regression, t-tests, etc.) to see if any obsered differences are large enough to be considered reliable (i.e., ``statistically significant'').
-
-You should have plots summarizing each of your variables, as well as combinations of variables that are obviously of importance (e.g., block x accuracy)
-
-Types of plots for variable types:
-- 2 continuous variables (e.g., age, height): scatterplot (GGPLOT); line (GGPLOT)
-etc\ldots{}
+Every analysis you carry out should include several steps in approximately this order:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi})}
-\setcounter{enumi}{3}
 \tightlist
 \item
-  Statistical analysis
+  Variable types: What is the scale of your variables? (e.g., continuous, discrete; interval, ordinal, nominal)
+\item
+  Tidy data: Put your data in tidy format. This usually means 1 observation/row and independent/dependent variables in each column.
 \end{enumerate}
 
-\begin{quote}
-\begin{quote}
-data analysis
-1) - scale types: ALWAYS consider first!
-metric, ordinal, etc
-need to know this for plotting and statistical analysis
-2) - long form vs wide form data; transforming between these
-important for plotting, ANOVA,
-2.5) data assumption: normally distributed? y = data; completely unknown; normal? tests
-3) general linear model
-correlation; simple regression, multiple regression
-\textgreater{} prediction- yes! causation - no!
-\textgreater{} causation - need experiment (control timing of cause(s)!! (only way w obs data = SEM/BAYES NETS)
-ttest logic
-anova logic
-ANOVA is a special case of regression with dichotomos predictors! (same mathematical model)
-what is the linear model doing? linear equation + normally distributed noise
-\textgreater{} assumption of the model - normally distributed data ==\textgreater{} the NOISE!! (unexplained variance part).
-\end{quote}
-\end{quote}
-
-how do do anovas/regression w software
-\textgreater\textgreater{} spss
-\textgreater\textgreater{} jasp
-\textgreater\textgreater{} R
-
-how to interpret \& report results (APA style; what to report; how to INTERPRET!)
-\textgreater\textgreater{} ANOVA
-\textgreater\textgreater{} regression?
-
-\begin{quote}
-what if assumptions are violated?
-\textgreater{} nonparametric statistical tests (robust to violations)
-\end{quote}
-
-frequentist (classical) vs bayesian statistics
-\textgreater\textgreater{} why? replicability!
-\textgreater\textgreater{} problems w classical (multiple comparisons; null hypothesis not what we want, no peeking/cheating!)
-\textgreater\textgreater{} problems solved by bayesian
-\textgreater\textgreater{} is NHST/classical worthless? NO!! its just that bayesian seems to be BETTER (more reliable by avoiding some of the problems that reduce reliability in terms of reproducability (replicability)
-\textgreater{} statistics is about REPLICATILBITY
-\textgreater{} replicability is about what is true!\\
-\textgreater{} we want to avoid publishig things that are not true! we want us (and others) to be able to replcate; bayesian may help us play it safer
-
-so what do we do in stats? 2 things
-1) estimation (e.g., mean, variance, difference between groups, learning rate, regreession coefficient)
-2) inference (e.g., difference between groups? effect of treatement? theory/model 1 better than theory/model 2?)
-note: both classical and bayesian apply the SAME MODEL!! GENERAL LINEAR MODEL
-\textgreater\textgreater{} they differ in terms of how they ESTIAMTE the parameters of the model(s)
-\textgreater\textgreater{} they differ in how we INTERPET THE RESULTS (i.e., make infernces from the data!)
+\begin{itemize}
+\tightlist
+\item
+  \url{https://vita.had.co.nz/papers/tidy-data.pdf}
+\end{itemize}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi})}
-\setcounter{enumi}{4}
+\setcounter{enumi}{2}
 \tightlist
 \item
-  Data modeling
+  Visualize: Visualize the data (make plots to see distribution of each variable including outliers, correlation between variables, Q-Q plots to assess normality)
+\item
+  Descriptive analysis: Carry out descriptive analyses (means, medians, and especially look for violations of normality)
+\item
+  Question: What question are you trying to answer? Whether groups differ? Whether they are correlated? Whether they differ from 0? See the book by Goss-Sampson (cited above from the JASP website) - it contains an invaluable Appendix with guidance on which test goes with which question, as well as guidance about what to do if normality is violated in your data
+\item
+  Inferential stats: Carry out the appropriate inferential statistical test. Always make plots within each analysis!
+\item
+  Interpret results: I recommend you follow the examples in the Goss-Sampson book for each analysis and write a summary of the results right there in the JASP file (just as they do in the JASP example analysis files). If you're working in R, carry out all analysis in an R Markdown (.RMD) file that includes analysis script as well as interpretation text.
 \end{enumerate}
 
-misc
-\textgreater\textgreater{} switching between long \& short data types
-\textgreater\textgreater{} page for this? blog post demonstrations? both?
-\textgreater\textgreater{} important: data types -boring but essential; need to master this as it underlies proper use of functions and many errors are related to mis-use
+See the JASP books cited above for examples and guidance on how to carry out each of these steps
 
-You can label chapter and section titles using \texttt{\{\#label\}} after them, e.g., we can reference Chapter \ref{intro}. If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \ref{methods}.
+\hypertarget{confirmatory-vs.-exploratory-analysis}{%
+\section{Confirmatory vs.~Exploratory analysis}\label{confirmatory-vs.-exploratory-analysis}}
 
-Figures and tables with captions will be placed in \texttt{figure} and \texttt{table} environments, respectively.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{par}\NormalTok{(}\DataTypeTok{mar =} \KeywordTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{4}\NormalTok{, }\FloatTok{.1}\NormalTok{, }\FloatTok{.1}\NormalTok{))}
-\KeywordTok{plot}\NormalTok{(pressure, }\DataTypeTok{type =} \StringTok{'b'}\NormalTok{, }\DataTypeTok{pch =} \DecValTok{19}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{figure}
-
-{\centering \includegraphics[width=0.8\linewidth]{bookdown-demo_files/figure-latex/nice-fig-1} 
-
-}
-
-\caption{Here is a nice figure!}\label{fig:nice-fig}
-\end{figure}
-
-Reference a figure by its code chunk label with the \texttt{fig:} prefix, e.g., see Figure \ref{fig:nice-fig}. Similarly, you can reference tables generated from \texttt{knitr::kable()}, e.g., see Table \ref{tab:nice-tab}.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{knitr}\OperatorTok{::}\KeywordTok{kable}\NormalTok{(}
-  \KeywordTok{head}\NormalTok{(iris, }\DecValTok{20}\NormalTok{), }\DataTypeTok{caption =} \StringTok{'Here is a nice table!'}\NormalTok{,}
-  \DataTypeTok{booktabs =} \OtherTok{TRUE}
-\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{table}
-
-\caption{\label{tab:nice-tab}Here is a nice table!}
-\centering
-\begin{tabular}[t]{rrrrl}
-\toprule
-Sepal.Length & Sepal.Width & Petal.Length & Petal.Width & Species\\
-\midrule
-5.1 & 3.5 & 1.4 & 0.2 & setosa\\
-4.9 & 3.0 & 1.4 & 0.2 & setosa\\
-4.7 & 3.2 & 1.3 & 0.2 & setosa\\
-4.6 & 3.1 & 1.5 & 0.2 & setosa\\
-5.0 & 3.6 & 1.4 & 0.2 & setosa\\
-\addlinespace
-5.4 & 3.9 & 1.7 & 0.4 & setosa\\
-4.6 & 3.4 & 1.4 & 0.3 & setosa\\
-5.0 & 3.4 & 1.5 & 0.2 & setosa\\
-4.4 & 2.9 & 1.4 & 0.2 & setosa\\
-4.9 & 3.1 & 1.5 & 0.1 & setosa\\
-\addlinespace
-5.4 & 3.7 & 1.5 & 0.2 & setosa\\
-4.8 & 3.4 & 1.6 & 0.2 & setosa\\
-4.8 & 3.0 & 1.4 & 0.1 & setosa\\
-4.3 & 3.0 & 1.1 & 0.1 & setosa\\
-5.8 & 4.0 & 1.2 & 0.2 & setosa\\
-\addlinespace
-5.7 & 4.4 & 1.5 & 0.4 & setosa\\
-5.4 & 3.9 & 1.3 & 0.4 & setosa\\
-5.1 & 3.5 & 1.4 & 0.3 & setosa\\
-5.7 & 3.8 & 1.7 & 0.3 & setosa\\
-5.1 & 3.8 & 1.5 & 0.3 & setosa\\
-\bottomrule
-\end{tabular}
-\end{table}
-
-You can write citations, too. For example, we are using the \textbf{bookdown} package \citep{R-bookdown} in this sample book, which was built on top of R Markdown and \textbf{knitr} \citep{xie2015}.
+\begin{itemize}
+\tightlist
+\item
+  Confirmatory analysis: Start by testing the hypotheses that led you to design your study as you did. This is probably reflected in the independent and dependent variables you chose to include in the study. Why else would you include a variable in your study if you don't intend to measure it. (Sometimes this does happen - you need to be clear in the writing about why you did that).
+\item
+  When you carry out confirmatory (i.e., planned) analyses, you have to be conservative in how you carry out your statistical analyses. For example, you shouldn't do anything to your data (e.g., unexpected group splits) before completing the basic analyses and seeing how things worked out (don't short-circuit your analyses half way through if you don't think things appear to be working out; complete all planned analyses first!). If you conduct an ANOVA, your post-hoc comparisons need to be a) limited to what was found significant in an omnibus test and b) corrected for multiple comparisons
+\item
+  AFTER you have completed your planned (confirmatory) analyses, feel free to do all the exploratory analysis you like! You just have make it clear when you write/present your results that you are switching from confiratory to exploratory analysis. If you do that, then the reader knows to take the exploratory findings with a grain of salt. Exploratory analyses are important and may suggest new hypotheses, but these hypotheses usually require a new study to provide a proper test.
+\end{itemize}
 
 \hypertarget{writing}{%
 \chapter{Writing}\label{writing}}
