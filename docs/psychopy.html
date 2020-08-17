@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 9 Psychopy for Data Collection | CDL Virtual Advisor (Lab Manual)</title>
   <meta name="description" content="This document contains guidelines and how-to examples for members of the CDL. It should be a useful resource for all lab members, but particularly for new members" />
-  <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 9 Psychopy for Data Collection | CDL Virtual Advisor (Lab Manual)" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Corey Bohil" />
 
 
-<meta name="date" content="2020-06-19" />
+<meta name="date" content="2020-08-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,8 +32,7 @@
   
   
 <link rel="prev" href="references.html"/>
-
-<script src="libs/header-attrs-2.1/header-attrs.js"></script>
+<link rel="next" href="sample-paper.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -53,6 +52,68 @@
 
 
 
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -71,82 +132,78 @@
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Overview</a></li>
-<li class="chapter" data-level="2" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i><b>2</b> Getting Started in the Lab</a>
-<ul>
-<li class="chapter" data-level="2.1" data-path="getting-started.html"><a href="getting-started.html#paperwork"><i class="fa fa-check"></i><b>2.1</b> Paperwork</a>
-<ul>
-<li class="chapter" data-level="2.1.1" data-path="getting-started.html"><a href="getting-started.html#undergraduate-students"><i class="fa fa-check"></i><b>2.1.1</b> Undergraduate Students</a></li>
-<li class="chapter" data-level="2.1.2" data-path="getting-started.html"><a href="getting-started.html#registration"><i class="fa fa-check"></i><b>2.1.2</b> Registration</a></li>
-<li class="chapter" data-level="2.1.3" data-path="getting-started.html"><a href="getting-started.html#volunteer-services-agreement."><i class="fa fa-check"></i><b>2.1.3</b> Volunteer Services Agreement.</a></li>
-<li class="chapter" data-level="2.1.4" data-path="getting-started.html"><a href="getting-started.html#graduate-students"><i class="fa fa-check"></i><b>2.1.4</b> Graduate Students</a></li>
+<li class="chapter" data-level="2" data-path="essential-reading.html"><a href="essential-reading.html"><i class="fa fa-check"></i><b>2</b> Essential Reading</a><ul>
+<li class="chapter" data-level="2.1" data-path="essential-reading.html"><a href="essential-reading.html#categorization"><i class="fa fa-check"></i><b>2.1</b> Categorization</a></li>
+<li class="chapter" data-level="2.2" data-path="essential-reading.html"><a href="essential-reading.html#fnirsneuroimaging"><i class="fa fa-check"></i><b>2.2</b> fNIRS/neuroimaging</a></li>
+<li class="chapter" data-level="2.3" data-path="essential-reading.html"><a href="essential-reading.html#virtualaugmented-reality"><i class="fa fa-check"></i><b>2.3</b> Virtual/Augmented Reality</a></li>
+<li class="chapter" data-level="2.4" data-path="essential-reading.html"><a href="essential-reading.html#statistsical-analysis"><i class="fa fa-check"></i><b>2.4</b> Statistsical Analysis</a></li>
+<li class="chapter" data-level="2.5" data-path="essential-reading.html"><a href="essential-reading.html#rrmarkdown"><i class="fa fa-check"></i><b>2.5</b> R/RMarkdown</a></li>
+<li class="chapter" data-level="2.6" data-path="essential-reading.html"><a href="essential-reading.html#productivitygood-research-habits"><i class="fa fa-check"></i><b>2.6</b> Productivity/Good Research Habits</a></li>
 </ul></li>
-<li class="chapter" data-level="2.2" data-path="getting-started.html"><a href="getting-started.html#software"><i class="fa fa-check"></i><b>2.2</b> Software</a></li>
-<li class="chapter" data-level="2.3" data-path="getting-started.html"><a href="getting-started.html#irb"><i class="fa fa-check"></i><b>2.3</b> IRB</a></li>
-<li class="chapter" data-level="2.4" data-path="getting-started.html"><a href="getting-started.html#subject-recruitment"><i class="fa fa-check"></i><b>2.4</b> Subject Recruitment</a>
-<ul>
-<li class="chapter" data-level="2.4.1" data-path="getting-started.html"><a href="getting-started.html#sona"><i class="fa fa-check"></i><b>2.4.1</b> Sona</a></li>
+<li class="chapter" data-level="3" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i><b>3</b> Getting Started in the Lab</a><ul>
+<li class="chapter" data-level="3.1" data-path="getting-started.html"><a href="getting-started.html#paperwork"><i class="fa fa-check"></i><b>3.1</b> Paperwork</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="getting-started.html"><a href="getting-started.html#undergraduate-students"><i class="fa fa-check"></i><b>3.1.1</b> Undergraduate Students</a></li>
+<li class="chapter" data-level="3.1.2" data-path="getting-started.html"><a href="getting-started.html#registration"><i class="fa fa-check"></i><b>3.1.2</b> Registration</a></li>
+<li class="chapter" data-level="3.1.3" data-path="getting-started.html"><a href="getting-started.html#volunteer-services-agreement."><i class="fa fa-check"></i><b>3.1.3</b> Volunteer Services Agreement.</a></li>
+<li class="chapter" data-level="3.1.4" data-path="getting-started.html"><a href="getting-started.html#graduate-students"><i class="fa fa-check"></i><b>3.1.4</b> Graduate Students</a></li>
 </ul></li>
-<li class="chapter" data-level="2.5" data-path="getting-started.html"><a href="getting-started.html#general-advice"><i class="fa fa-check"></i><b>2.5</b> General advice</a></li>
-<li class="chapter" data-level="2.6" data-path="getting-started.html"><a href="getting-started.html#modifying-this-lab-manual-grad-students-only"><i class="fa fa-check"></i><b>2.6</b> Modifying this Lab Manual (Grad students only)</a></li>
+<li class="chapter" data-level="3.2" data-path="getting-started.html"><a href="getting-started.html#software"><i class="fa fa-check"></i><b>3.2</b> Software</a></li>
+<li class="chapter" data-level="3.3" data-path="getting-started.html"><a href="getting-started.html#irb"><i class="fa fa-check"></i><b>3.3</b> IRB</a></li>
+<li class="chapter" data-level="3.4" data-path="getting-started.html"><a href="getting-started.html#subject-recruitment"><i class="fa fa-check"></i><b>3.4</b> Subject Recruitment</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="getting-started.html"><a href="getting-started.html#sona"><i class="fa fa-check"></i><b>3.4.1</b> Sona</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="essential-reading.html"><a href="essential-reading.html"><i class="fa fa-check"></i><b>3</b> Essential Reading</a>
-<ul>
-<li class="chapter" data-level="3.1" data-path="essential-reading.html"><a href="essential-reading.html#categorization"><i class="fa fa-check"></i><b>3.1</b> Categorization</a></li>
-<li class="chapter" data-level="3.2" data-path="essential-reading.html"><a href="essential-reading.html#fnirsneuroimaging"><i class="fa fa-check"></i><b>3.2</b> fNIRS/neuroimaging</a></li>
-<li class="chapter" data-level="3.3" data-path="essential-reading.html"><a href="essential-reading.html#virtualaugmented-reality"><i class="fa fa-check"></i><b>3.3</b> Virtual/Augmented Reality</a></li>
-<li class="chapter" data-level="3.4" data-path="essential-reading.html"><a href="essential-reading.html#statistsical-analysis"><i class="fa fa-check"></i><b>3.4</b> Statistsical Analysis</a></li>
-<li class="chapter" data-level="3.5" data-path="essential-reading.html"><a href="essential-reading.html#rrmarkdown"><i class="fa fa-check"></i><b>3.5</b> R/RMarkdown</a></li>
-<li class="chapter" data-level="3.6" data-path="essential-reading.html"><a href="essential-reading.html#productivitygood-research-habits"><i class="fa fa-check"></i><b>3.6</b> Productivity/Good Research Habits</a></li>
+<li class="chapter" data-level="3.5" data-path="getting-started.html"><a href="getting-started.html#general-advice"><i class="fa fa-check"></i><b>3.5</b> General advice</a></li>
+<li class="chapter" data-level="3.6" data-path="getting-started.html"><a href="getting-started.html#modifying-this-lab-manual-grad-students-only"><i class="fa fa-check"></i><b>3.6</b> Modifying this Lab Manual (Grad students only)</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>4</b> Data Analysis</a>
-<ul>
+<li class="chapter" data-level="4" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>4</b> Data Analysis</a><ul>
 <li class="chapter" data-level="4.1" data-path="intro.html"><a href="intro.html#github-repositories"><i class="fa fa-check"></i><b>4.1</b> GitHub Repositories</a></li>
 <li class="chapter" data-level="4.2" data-path="intro.html"><a href="intro.html#steps-in-every-analysis"><i class="fa fa-check"></i><b>4.2</b> Steps in every analysis</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="writing.html"><a href="writing.html"><i class="fa fa-check"></i><b>5</b> Writing</a>
-<ul>
-<li class="chapter" data-level="5.1" data-path="writing.html"><a href="writing.html#general-advice-1"><i class="fa fa-check"></i><b>5.1</b> General advice</a></li>
-<li class="chapter" data-level="5.2" data-path="writing.html"><a href="writing.html#start-writing-early"><i class="fa fa-check"></i><b>5.2</b> Start writing early</a>
-<ul>
+<li class="chapter" data-level="5" data-path="writing.html"><a href="writing.html"><i class="fa fa-check"></i><b>5</b> Writing</a><ul>
+<li class="chapter" data-level="5.1" data-path="getting-started.html"><a href="getting-started.html#general-advice"><i class="fa fa-check"></i><b>5.1</b> General advice</a></li>
+<li class="chapter" data-level="5.2" data-path="writing.html"><a href="writing.html#start-writing-early"><i class="fa fa-check"></i><b>5.2</b> Start writing early</a><ul>
 <li class="chapter" data-level="5.2.1" data-path="writing.html"><a href="writing.html#misc"><i class="fa fa-check"></i><b>5.2.1</b> misc</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="functional-near-infrared-spectroscopy-fnirs.html"><a href="functional-near-infrared-spectroscopy-fnirs.html"><i class="fa fa-check"></i><b>6</b> Functional Near-Infrared Spectroscopy (fNIRS)</a>
-<ul>
+<li class="chapter" data-level="6" data-path="functional-near-infrared-spectroscopy-fnirs.html"><a href="functional-near-infrared-spectroscopy-fnirs.html"><i class="fa fa-check"></i><b>6</b> Functional Near-Infrared Spectroscopy (fNIRS)</a><ul>
 <li class="chapter" data-level="6.1" data-path="functional-near-infrared-spectroscopy-fnirs.html"><a href="functional-near-infrared-spectroscopy-fnirs.html#nirsport-88-system-nirx-medical-technologies-inc."><i class="fa fa-check"></i><b>6.1</b> NIRSPort 88 system (NIRX Medical Technologies, Inc.)</a></li>
 <li class="chapter" data-level="6.2" data-path="functional-near-infrared-spectroscopy-fnirs.html"><a href="functional-near-infrared-spectroscopy-fnirs.html#fnir-devices-imager-1000-from-fnir-devicesbiopac"><i class="fa fa-check"></i><b>6.2</b> fNIR Devices Imager 1000 (from fNIR Devices/Biopac)</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="virtual-augmented-reality.html"><a href="virtual-augmented-reality.html"><i class="fa fa-check"></i><b>7</b> Virtual &amp; Augmented Reality</a>
-<ul>
+<li class="chapter" data-level="7" data-path="virtual-augmented-reality.html"><a href="virtual-augmented-reality.html"><i class="fa fa-check"></i><b>7</b> Virtual &amp; Augmented Reality</a><ul>
 <li class="chapter" data-level="7.1" data-path="virtual-augmented-reality.html"><a href="virtual-augmented-reality.html#virtual-reality"><i class="fa fa-check"></i><b>7.1</b> Virtual Reality</a></li>
 <li class="chapter" data-level="7.2" data-path="virtual-augmented-reality.html"><a href="virtual-augmented-reality.html#augmented-reality"><i class="fa fa-check"></i><b>7.2</b> Augmented Reality</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="students.html"><a href="students.html"><i class="fa fa-check"></i><b>8</b> Students</a>
-<ul>
-<li class="chapter" data-level="8.1" data-path="students.html"><a href="students.html#ph.d.-students"><i class="fa fa-check"></i><b>8.1</b> Ph.D. Students</a>
-<ul>
+<li class="chapter" data-level="8" data-path="students.html"><a href="students.html"><i class="fa fa-check"></i><b>8</b> Students</a><ul>
+<li class="chapter" data-level="8.1" data-path="students.html"><a href="students.html#ph.d.-students"><i class="fa fa-check"></i><b>8.1</b> Ph.D. Students</a><ul>
 <li class="chapter" data-level="8.1.1" data-path="students.html"><a href="students.html#hfc-program-requirements"><i class="fa fa-check"></i><b>8.1.1</b> HFC Program Requirements</a></li>
 </ul></li>
-<li class="chapter" data-level="8.2" data-path="students.html"><a href="students.html#undergraduate-students-1"><i class="fa fa-check"></i><b>8.2</b> Undergraduate Students</a>
-<ul>
+<li class="chapter" data-level="8.2" data-path="getting-started.html"><a href="getting-started.html#undergraduate-students"><i class="fa fa-check"></i><b>8.2</b> Undergraduate Students</a><ul>
 <li class="chapter" data-level="8.2.1" data-path="students.html"><a href="students.html#volunteer-form"><i class="fa fa-check"></i><b>8.2.1</b> Volunteer form</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
-<li class="chapter" data-level="9" data-path="psychopy.html"><a href="psychopy.html"><i class="fa fa-check"></i><b>9</b> Psychopy for Data Collection</a>
-<ul>
-<li class="chapter" data-level="9.1" data-path="psychopy.html"><a href="psychopy.html#getting-started"><i class="fa fa-check"></i><b>9.1</b> Getting Started</a>
-<ul>
+<li class="chapter" data-level="9" data-path="psychopy.html"><a href="psychopy.html"><i class="fa fa-check"></i><b>9</b> Psychopy for Data Collection</a><ul>
+<li class="chapter" data-level="9.1" data-path="psychopy.html"><a href="psychopy.html#getting-started"><i class="fa fa-check"></i><b>9.1</b> Getting Started</a><ul>
 <li class="chapter" data-level="9.1.1" data-path="psychopy.html"><a href="psychopy.html#psychopy-1"><i class="fa fa-check"></i><b>9.1.1</b> PsychoPy</a></li>
 <li class="chapter" data-level="9.1.2" data-path="psychopy.html"><a href="psychopy.html#pavlovia"><i class="fa fa-check"></i><b>9.1.2</b> Pavlovia</a></li>
-<li class="chapter" data-level="9.1.3" data-path="psychopy.html"><a href="psychopy.html#sona-1"><i class="fa fa-check"></i><b>9.1.3</b> SONA</a></li>
+<li class="chapter" data-level="9.1.3" data-path="getting-started.html"><a href="getting-started.html#sona"><i class="fa fa-check"></i><b>9.1.3</b> SONA</a></li>
 </ul></li>
-<li class="chapter" data-level="9.2" data-path="psychopy.html"><a href="psychopy.html#frequently-asked-questions-faqs"><i class="fa fa-check"></i><b>9.2</b> Frequently Asked Questions (FAQs)</a>
-<ul>
-<li class="chapter" data-level="9.2.1" data-path="psychopy.html"><a href="psychopy.html#technical"><i class="fa fa-check"></i><b>9.2.1</b> Technical</a></li>
-<li class="chapter" data-level="9.2.2" data-path="psychopy.html"><a href="psychopy.html#ucf-specific"><i class="fa fa-check"></i><b>9.2.2</b> UCF-specific</a></li>
+<li class="chapter" data-level="9.2" data-path="psychopy.html"><a href="psychopy.html#frequently-asked-questions-faqs"><i class="fa fa-check"></i><b>9.2</b> Frequently Asked Questions (FAQs)</a><ul>
+<li class="chapter" data-level="9.2.1" data-path="psychopy.html"><a href="psychopy.html#compliance"><i class="fa fa-check"></i><b>9.2.1</b> Compliance</a></li>
+<li class="chapter" data-level="9.2.2" data-path="psychopy.html"><a href="psychopy.html#technical"><i class="fa fa-check"></i><b>9.2.2</b> Technical</a></li>
 <li class="chapter" data-level="9.2.3" data-path="psychopy.html"><a href="psychopy.html#miscellaneous"><i class="fa fa-check"></i><b>9.2.3</b> Miscellaneous</a></li>
 </ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="sample-paper.html"><a href="sample-paper.html"><i class="fa fa-check"></i><b>10</b> Sample paper</a><ul>
+<li class="chapter" data-level="10.1" data-path="sample-paper.html"><a href="sample-paper.html#road-map"><i class="fa fa-check"></i><b>10.1</b> Road map</a><ul>
+<li class="chapter" data-level="10.1.1" data-path="sample-paper.html"><a href="sample-paper.html#project-road-map"><i class="fa fa-check"></i><b>10.1.1</b> Project road map</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="sample-paper.html"><a href="sample-paper.html#introlit-review"><i class="fa fa-check"></i><b>10.2</b> Intro/lit review</a></li>
+<li class="chapter" data-level="10.3" data-path="sample-paper.html"><a href="sample-paper.html#methods"><i class="fa fa-check"></i><b>10.3</b> Methods</a></li>
+<li class="chapter" data-level="10.4" data-path="sample-paper.html"><a href="sample-paper.html#results"><i class="fa fa-check"></i><b>10.4</b> Results</a><ul>
+<li class="chapter" data-level="10.4.1" data-path="sample-paper.html"><a href="sample-paper.html#experiment-1"><i class="fa fa-check"></i><b>10.4.1</b> Experiment 1</a></li>
+</ul></li>
+<li class="chapter" data-level="10.5" data-path="sample-paper.html"><a href="sample-paper.html#discussionconclusions"><i class="fa fa-check"></i><b>10.5</b> Discussion/Conclusions</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -168,31 +225,44 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="psychopy" class="section level1" number="9">
+<div id="psychopy" class="section level1">
 <h1><span class="header-section-number">Chapter 9</span> Psychopy for Data Collection</h1>
 <p><a href="https://www.psychopy.org">Psychopy</a> is a free open-source package for building experiments in Python that is developed and maintained by the University of Nottingham in the UK. It has been active since 2007, but recent updates have introduced a purpose-built solution for online data collection called <a href="https://pavlovia.org/#about">Pavlovia</a>. Pavlovia is a front-end for gitlab and allows for version control of experiment code.</p>
-<div id="getting-started" class="section level2" number="9.1">
+<div id="getting-started" class="section level2">
 <h2><span class="header-section-number">9.1</span> Getting Started</h2>
-<div id="psychopy-1" class="section level3" number="9.1.1">
+<div id="psychopy-1" class="section level3">
 <h3><span class="header-section-number">9.1.1</span> PsychoPy</h3>
 <p>A standalone version (no Python install required) can be downloaded from the <a href="https://www.psychopy.org/download.html">project’s website</a>. After installing Psychopy, the best place to start is with the <a href="https://www.psychopy.org/documentation.html">PsychoPy documentation</a>, which includes guides on getting started building experiments. Included with the initial download are several minimalist, functional experiment demos that provide a good starting point for building your experiment.</p>
 </div>
-<div id="pavlovia" class="section level3" number="9.1.2">
+<div id="pavlovia" class="section level3">
 <h3><span class="header-section-number">9.1.2</span> Pavlovia</h3>
 <p>After installing PsychoPy, the next step in getting an online experiment running is <a href="https://gitlab.pavlovia.org/users/sign_in">setting up an account on Pavlovia</a>. <strong>Note</strong>: In order for the account to fall under the UCF site license,
 the associated email must have the *@ucf.edu domain. Best practice is to use the email of the faculty member in charge of the lab. This ensures that the faculty member retains admin control of the account. The account username and password will likely need to be provided to students to allow them to develop and access experiments on Pavlovia, and the username and password need not correspond to the faculty email or any existing passwords. Notification settings can also be changed on <a href="https://gitlab.pavlovia.org/profile/emails">Pavlovia</a> to control where the various types of email notifications are directed.</p>
 </div>
-<div id="sona-1" class="section level3" number="9.1.3">
+<div id="sona" class="section level3">
 <h3><span class="header-section-number">9.1.3</span> SONA</h3>
 </div>
 </div>
-<div id="frequently-asked-questions-faqs" class="section level2" number="9.2">
+<div id="frequently-asked-questions-faqs" class="section level2">
 <h2><span class="header-section-number">9.2</span> Frequently Asked Questions (FAQs)</h2>
 <p>While many issues one might encounter are addressed in the <a href="https://www.psychopy.org/documentation.html">documentation</a>, keep in mind that, as with all free open-source software, PsychoPy and Pavlovia are perpetually under development and there will be bugs. Multiple resources exist to facilitate solving such problems – the <a href="https://discourse.psychopy.org/">PsychoPy Forum</a> is home to a growing and very helpful community, UCF Psychology
 will be adding a private discussion board (to be added later) specifically for helping each other use PsychoPy – but ultimately the how-to of building your experiment falls to you, the researcher. A few common questions have, however, been addressed below, and suggestions for addition to this list are always welcomed.</p>
-<div id="technical" class="section level3" number="9.2.1">
-<h3><span class="header-section-number">9.2.1</span> Technical</h3>
+<div id="compliance" class="section level3">
+<h3><span class="header-section-number">9.2.1</span> Compliance</h3>
 <ol class="example" style="list-style-type: decimal">
+<li>Can I collect restricted data using PsychoPy?</li>
+</ol>
+<p>No. While the program itself allows for the collection of many kinds of data, including survey, the data storage of Pavlovia does not meet UCF’s InfoSec requirements for sensitive or identifiable data.<br />
+<br />
+</p>
+<ol start="2" class="example" style="list-style-type: decimal">
+<li>What can I do if I need to collect restricted data then?</li>
+</ol>
+<p>Additional questions can be added to SONA’s intake questionnaire to securely collect sensitive or identifiable data.</p>
+</div>
+<div id="technical" class="section level3">
+<h3><span class="header-section-number">9.2.2</span> Technical</h3>
+<ol start="3" class="example" style="list-style-type: decimal">
 <li>Is there a built-in component for providing feedback based on participants’ responses?</li>
 </ol>
 <p>Astonishingly, no. The way to provide corrective feedback is using the <a href="https://www.psychopy.org/builder/components/code.html">Code Component</a>. An example of the Python code necessary is provided below. Note that the strings used are f-strings – this is necessary for successful translation to JS.</p>
@@ -214,50 +284,17 @@ will be adding a private discussion board (to be added later) specifically for h
   <code>repeatTrial.finished = True</code><br />
 <br />
 </p>
-<ol start="2" class="example" style="list-style-type: decimal">
+<ol start="4" class="example" style="list-style-type: decimal">
 <li>Why does my feedback work in Python but not in JS?</li>
 </ol>
-<p>The built-in Python-&gt;JS translator is good but not perfect. Be sure you are using f-strings (see above).<br />
-<br />
-</p>
-<ol start="3" class="example" style="list-style-type: decimal">
-<li>I’m trying to repeat trials when the participant doesn’t provide a response/correct response. It works in Python but not JS, what’s up?</li>
-</ol>
-<p>JS’s default trial handler changes the name of whatever loop is currently looping to be “trials”. So, if you’re using the code shown above (In End Routine), you’ll need to change the code in the JS window from <code>repeatTrial.finished = false;</code> to <code>trials.finished=false;</code><br />
-<br />
-</p>
-<ol start="4" class="example" style="list-style-type: decimal">
+<p>The built-in Python-&gt;JS translator is good but not perfect. Be sure you are using f-strings</p>
+<ol start="5" class="example" style="list-style-type: decimal">
 <li>Why are my stimulus image files not being read into my experiment for presentation?</li>
 </ol>
-<p>PsychoPy’s pathing is picky - be sure your image files (.PNG, .wav, etc.) are in the root directory with your experiment file (.psyexp or .py) and your conditions file(s) (.csv, .xlsx, etc.).<br />
-<br />
-</p>
+<p>PsychoPy’s pathing is picky - be sure your image files (.PNG, .wav, etc.) are in the root directory with your experiment file (.psyexp or .py) and your conditions file(s) (.csv, .xlsx, etc.)</p>
 </div>
-<div id="ucf-specific" class="section level3" number="9.2.2">
-<h3><span class="header-section-number">9.2.2</span> UCF-specific</h3>
-<ol start="5" class="example" style="list-style-type: decimal">
-<li>Can I collect restricted data using PsychoPy?</li>
-</ol>
-<p>No. While the program itself allows for the collection of many kinds of data, including survey, the data storage of Pavlovia does not meet UCF’s InfoSec requirements for sensitive or identifiable data.<br />
-</p>
-<ol start="6" class="example" style="list-style-type: decimal">
-<li>What can I do if I need to collect restricted data then?</li>
-</ol>
-<p>Additional questions can be added to SONA’s intake questionnaire to securely collect sensitive or identifiable data.<br />
-</p>
-<ol start="7" class="example" style="list-style-type: decimal">
-<li>How do I integrate my experiment with SONA for automatic credit granting?</li>
-</ol>
-<p>See the guides on <a href="https://www.sona-systems.com/help/psychopy.aspx">SONA’s help page</a> and in the <a href="https://www.psychopy.org/online/onlineParticipants.html#recruitingonline">PsychoPy documentation</a>.<br />
-<br />
-</p>
-</div>
-<div id="miscellaneous" class="section level3" number="9.2.3">
+<div id="miscellaneous" class="section level3">
 <h3><span class="header-section-number">9.2.3</span> Miscellaneous</h3>
-<ol start="8" class="example" style="list-style-type: decimal">
-<li>How do I cite PsychoPy?</li>
-</ol>
-<p>See the <a href="https://www.psychopy.org/about/index.html">about page</a> of the documentation for the latest, most relevant citation.</p>
 
 </div>
 </div>
@@ -267,8 +304,8 @@ will be adding a private discussion board (to be added later) specifically for h
           </div>
         </div>
       </div>
-<a href="references.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="references.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="sample-paper.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -318,6 +355,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
